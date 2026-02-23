@@ -1,0 +1,10 @@
+body {
+  font-family: 'Lora', serif;
+}
+.title {
+    color: green;
+}
+
+.hero-title-text text-xl md:text-2xl tracking-wider{
+    font-family: "Lora", serif;
+}
