@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="tabguy.jpeg" type="image/jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Playtime Accessible — Sophie Ruddy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Fjalla+One&display=swap" rel="stylesheet">
+    <style>
+        strong { font-weight: 700; }
+        body {
+            font-family: 'Lora', serif;
+            font-weight: 400;
+            background-color: #ffffff;
+            color: #19823D;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, h5, h6, nav a {
+            font-family: 'Fjalla One', sans-serif;
+            color: #19823D;
+        }
+        .sticky-header {
+            background-color: #19823D;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+        }
+        .logo-box {
+            height: 86px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .initial-link {
+            color: white;
+            font-family: 'Fjalla One', sans-serif;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            transition: background-color 0.2s ease;
+        }
+        .initial-link:hover {
+            background-color: #EDAD6D;
+        }
+
+        /* Project title block */
+        .project-hero {
+            background-color: #19823D;
+            padding-top: 86px; /* nav height */
+            padding-bottom: 40px;
+        }
+        .project-hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 40px 0 40px;
+            display: flex;
+            align-items: flex-end;
+            gap: 32px;
+        }
+        .project-hero h1 {
+            color: white;
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .project-hero p {
+            color: rgba(255,255,255,0.85);
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            max-width: 580px;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.75);
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        .back-btn:hover { color: #EDAD6D; }
+        .back-btn svg { width: 16px; height: 16px; }
+
+        /* Layout */
+        .page-body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px 80px 40px;
+            display: flex;
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        /* Orange vertical nav */
+        .side-nav {
+            width: 200px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 106px; /* nav + some space */
+            padding-top: 40px;
+        }
+        .side-nav a {
+            display: block;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.95rem;
+            color: #EDAD6D;
+            text-decoration: none;
+            padding: 10px 0 10px 16px;
+            border-left: 3px solid #EDAD6D;
+            transition: color 0.2s, background-color 0.2s;
+            line-height: 1.3;
+        }
+        .side-nav a:hover {
+            color: #19823D;
+            background-color: rgba(237,173,109,0.12);
+        }
+        .side-nav a.active {
+            color: #19823D;
+            background-color: rgba(237,173,109,0.18);
+            border-left-color: #19823D;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding-top: 40px;
+            padding-left: 48px;
+        }
+        .content-section {
+            margin-bottom: 60px;
+            scroll-margin-top: 120px;
+        }
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: #19823D;
+        }
+        .content-section p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-family: 'Lora', serif;
+        }
+        .placeholder-box {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #f0f7f3;
+            border: 2px dashed #19823D;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #19823D;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            opacity: 0.5;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Horizontal Green Nav (same as index) -->
+    <header class="sticky-header">
+        <nav class="mx-auto px-10 py-3 flex items-center justify-between">
+            <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
+                <img src="logonew.jpeg" alt="Sophie Ruddy Logo" class="w-full h-full object-contain" style="border: none;">
+            </a>
+            <div class="space-x-8 text-lg">
+                <a href="index.html#about" class="initial-link transition duration-150">ABOUT ME</a>
+                <a href="index.html#projects" class="initial-link transition duration-150">PROJECTS</a>
+                <a href="index.html#wow" class="initial-link transition duration-150">W.O.W.</a>
+                <a href="index.html#contact" class="initial-link transition duration-150">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Title Block (green, under nav) -->
+    <div class="project-hero">
+        <div class="project-hero-inner">
+            <div>
+                <a href="index.html#projects" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+                    Back to Projects
+                </a>
+                <h1>Making Playtime Accessible</h1>
+                <p>An inclusive play environment for children with disabilities</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page body: side nav + content -->
+    <div class="page-body">
+
+        <!-- Orange vertical side nav -->
+        <nav class="side-nav" id="side-nav">
+            <a href="#problem-statement" class="active">Problem Statement</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#whats-next">What's Next</a>
+        </nav>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <section id="problem-statement" class="content-section">
+                <h2>Problem Statement</h2>
+                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
+                <div class="placeholder-box">Image / Figure Placeholder</div>
+                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
+            </section>
+
+            <section id="design-requirements" class="content-section">
+                <h2>Design Requirements</h2>
+                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
+                <div class="placeholder-box">Image / Figure Placeholder</div>
+            </section>
+
+            <section id="methodology" class="content-section">
+                <h2>Methodology</h2>
+                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
+                <div class="placeholder-box">Image / Figure Placeholder</div>
+                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
+            </section>
+
+            <section id="solutions" class="content-section">
+                <h2>Solutions</h2>
+                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
+                <div class="placeholder-box">Image / Figure Placeholder</div>
+            </section>
+
+            <section id="whats-next" class="content-section">
+                <h2>What's Next</h2>
+                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Highlight active side nav link on scroll
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.side-nav a');
+
+        function onScroll() {
+            let current = '';
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top <= 140) current = sec.id;
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+    </script>
+
+</body>
+</html>
