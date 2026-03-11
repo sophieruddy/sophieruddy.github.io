@@ -18,9 +18,14 @@
             color: #19823D;
             font-size: 16px;
         }
-        h1, h2, h3, h4, h5, h6, nav a {
+        h2, h3, h4, h5, h6, nav a {
             font-family: 'Fjalla One', sans-serif;
             color: #19823D;
+        }
+        
+         h1 {
+            font-family: 'Fjalla One', sans-serif;
+            color: white;
         }
         .sticky-header {
             background-color: #19823D;
@@ -68,7 +73,7 @@
             color: rgba(25, 130, 61, 0.85);
             font-family: 'Lora', serif;
             font-size: 1.05rem;
-            max-width: 580px;
+            max-width: 3251px;
         }
         .back-btn {
             display: inline-flex;
@@ -160,6 +165,58 @@
             opacity: 0.6;
             margin: 24px 0;
         }
+     .content-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-left: 2rem;  /* add this */
+}
+
+.content-section ul li {
+  padding: 8px 0 8px 2rem;  /* reduced top/bottom padding */
+  position: relative;
+  color: #19823D;
+  font-family: 'Lora', serif;
+  line-height: 1.4;  /* tighter line height */
+}
+
+.content-section ul li::before {
+  content: '●';
+  color: #EDAD6D;
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  .grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+}
+
+.grid-2x2 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+        .section-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  border-radius: 8px;
+}
+        
     </style>
 </head>
 <body>
@@ -182,13 +239,14 @@
     <!-- Orange Title Block -->
     <div class="project-hero">
         <div class="project-hero-inner">
-            <a href="index.html#wow" class="back-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+            <a href="index.html#wow" class="back-btn" style="color:white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: white"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
                 Back to W.O.W.
             </a>
-            <h1>Fostering Discussion</h1>
-            <p>Translating complex theological ideas into applicable hour-long roundtables</p>
-        </div>
+           <h1 style="color: white; margin-bottom: 24px;">Fostering Discussion</h1>
+            <p style="color: white">Teaching 21Theo, a weekly theology seminar at my church, is not a design project; there are no CAD files, no prototypes, and no deliverables. Regardless, it reflects a value that shows up across all of my work: I am drawn to designing better human experiences.</p><br>
+
+<p style="color: white">Every week I translate dense theological texts into conversations my peers actually want to have — listening carefully, asking the right follow-up questions, and presenting material in new ways until it lands. I just happen to think that's worth showing.</p></div>
     </div>
 
     <!-- Page body: side nav + content -->
@@ -198,8 +256,8 @@
         <nav class="side-nav" id="side-nav">
             <a href="#what-i-saw" class="active">What I Saw</a>
             <a href="#what-i-thought">What I Thought</a>
-            <a href="#what-i-did">What I Did</a>
-            <a href="#what-i-created">What I Created</a>
+            <a href="#what-i-did">What I Do</a>
+            <a href="#what-i-created">What I Create</a>
             <a href="#why-include-this">Why Include This?</a>
         </nav>
 
@@ -207,33 +265,41 @@
         <main class="main-content">
 
             <section id="what-i-saw" class="content-section">
-                <h2>What I Saw</h2>
-                <p>Describe what you observed — the situation, environment, or moment that caught your attention and sparked this project.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <h2>What I Saw</h2>
+  <p>A job opportunity to learn more about my faith by teaching my peers as a freshman.</p>
+  <img src="holding.jpg" alt="What I Saw" class="section-img" /></section>
 
             <section id="what-i-thought" class="content-section">
                 <h2>What I Thought</h2>
-                <p>Share your reaction and analysis. What did this observation make you realize? What questions did it raise?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <p>I enjoy learning about theology. I enjoy meaningful reflection. I enjoy asking questions. I could do a good job leading this. 
+</p>
+               <img src="21theo.png" alt="What I Thought" class="section-img" /> </section>
 
             <section id="what-i-did" class="content-section">
-                <h2>What I Did</h2>
-                <p>Walk through the actions you took — how you explored, tested, built, or experimented in response to what you saw and thought.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <h2>What I Do
+                </h2>
+                <ul><li>I read theological commentary, historical context, and biblical texts and condense the material into a weekly hour-long guided discussion. </li>
 
-            <section id="what-i-created" class="content-section">
-                <h2>What I Created</h2>
-                <p>Show and describe the outcome — what you made, designed, built, or produced as a result of this experience.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+<li>I translate the content from these documents into analogies, lectures, and open-ended questions that are digestible, timely for current events, and applicable to my peers’ lives. 
+</li>
+<li>I collaborate with another student, aligning schedules, weekly goals, and different interpretations of text to ideate and iterate on our outlines. </li>
+
+<li>I implement feedback from my supervisor to ensure the organization’s beliefs are accurately reflected and prioritized within the specific language of our programming. </li>
+
+<li>I learn about something new!
+</li></ul>
+               <div class="grid-2x2">
+  <img src="bruggeman1.jpg" alt="Image 1" />
+  <img src="civiclife2.png" alt="Image 2" style="object-position: left center;" />
+  <img src="queertheo.webp" alt="Image 3" />
+  <img src="vocation.jpg" alt="Image 4" />
+</div> </section>
 
             <section id="why-include-this" class="content-section">
                 <h2>Why Include This?</h2>
-                <p>Reflect on why this belongs in your portfolio. What does it reveal about how you think, what you care about, or who you are as a designer?</p>
-            </section>
+            <p>My on-campus job is evidence that I want to be part of creating meaningful experiences for people. I enjoy listening in these sessions just as I enjoy listening in user research; I practice follow-up questions, pivoting, and recognizing misunderstandings in real-time. No matter what I am pursuing, I seek to foster a sense of community where every person’s unique perspective can be seen and heard. The R&D approach I bring to the creation of these discussion guides shows that I am never satisfied with what is working; I continue to find new strategies to engage individuals and keep our discussions fresh, so that they are excited to stretch their theological boundaries and participate each week.  
+</p>    
+                <img src="teaching.png" alt="Why Include This" class="section-img" />  </section>
 
         </main>
     </div>
