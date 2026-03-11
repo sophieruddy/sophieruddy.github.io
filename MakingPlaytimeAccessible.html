@@ -49,9 +49,10 @@
 
         /* Project title block */
         .project-hero {
-            background-color: #19823D;
+            background-color: #ffffff;
             padding-top: 86px; /* nav height */
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +63,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +78,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +86,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -143,7 +144,7 @@
             color: #19823D;
         }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,6 +164,377 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+   .problem-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.problem-text {
+  flex: 1;
+}
+
+.problem-images {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.problem-images figure {
+  margin: 0;
+}
+
+.problem-images img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.problem-images figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #555;
+  text-align: center;
+
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .problem-layout {
+    flex-direction: column;
+  }
+}
+        
+        .methodology-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.methodology-image {
+  flex: 1;
+}
+
+.methodology-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.methodology-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spoiler-btn {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  background-color: #EDAD6D;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px dashed #c8893a;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+  cursor: pointer;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1rem;
+}
+
+.spoiler-btn:hover {
+  background-color: #c8893a;
+}
+
+@media (max-width: 768px) {
+  .methodology-layout {
+    flex-direction: column;
+  }
+}
+        
+        .spoiler-image {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.spoiler-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.spoiler-caption {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+        .ideation-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.ideation-layout p {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.ideation-side-img {
+  width: 260px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.ideation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ideation-grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 768px) {
+  .ideation-layout {
+    flex-direction: column;
+  }
+  .ideation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+        
+        .requirements-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+.requirements-table td {
+  padding: 12px 16px;
+  border: 1px solid #d0e8d8;
+  color: #19823D;
+  font-family: 'Lora', serif;
+}
+
+.requirements-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bottom-row {
+  outline: 3px solid #19823D;
+  outline-offset: -1px;
+}
+
+.bottom-row td {
+  border-top: 3px solid #19823D;
+}
+
+.bottom-row td:first-child {
+  border-left: 3px solid #19823D;
+}
+
+.bottom-row td:last-child {
+  border-right: 3px solid #19823D;
+}
+        
+        .aha-block {
+  background-color: #EDAD6D;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aha-label {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.aha-block p {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  color: white !important;
+  line-height: 1.7;
+  margin: 0 !important;
+}
+        
+       .content-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-left: 2rem;  /* add this */
+}
+
+.content-section ul li {
+  padding: 2px 0 2px 2rem;  /* reduced top/bottom padding */
+  position: relative;
+  color: #19823D;
+  font-family: 'Lora', serif;
+  line-height: 1.4;  /* tighter line height */
+}
+
+.content-section ul li::before {
+  content: '●';
+  color: #EDAD6D;
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+        
+       .designers-math {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.math-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.math-inputs figure {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.math-inputs figure img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.math-inputs figcaption {
+  font-size: 0.8rem;
+  color: #19823D;
+  margin-top: 0.4rem;
+}
+
+.math-plus, .math-equals {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2rem;
+  color: #EDAD6D;
+  flex-shrink: 0;
+}
+
+.math-result {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.math-result img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.math-result figcaption {
+  font-size: 0.9rem;
+  color: #19823D;
+  margin-top: 0.5rem;
+  font-family: 'Fjalla One', sans-serif;
+}
+      
+      /* Project Overview Box */
+.project-overview {
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 48px;
+  background: #19823D;
+  border-radius: 10px;
+}
+
+.project-overview .overview-label {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.project-overview .overview-abstract {
+  font-family: 'Lora', serif;
+  font-size: 0.97rem;
+  color: white !important;
+  line-height: 1.85;
+  margin: 0 !important;
+}
+
+      .image-banner {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.image-banner .caption {
+  font-size: 0.85rem;
+  color: #19823D;
+  text-align: center;
+  margin: 0.4rem 0 0;
+  
+}
+      
+      .requirements-table td img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+      .requirements-table td p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+      .problem-images figure {
+  margin: 0;
+  flex: 1;
+}
+
+.problem-images img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}  
+      
     </style>
 </head>
 <body>
@@ -191,7 +563,10 @@
                     Back to Projects
                 </a>
                 <h1>Making Playtime Accessible</h1>
-                <p>An inclusive play environment for children with disabilities</p>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">January 2025 - Present</h2> <br>
+                <p> Team: Christina Feng, Christian Oscar-Ramierez, Hayden Williams
+<br>Role: Project Lead
+</p>
             </div>
         </div>
     </div>
@@ -202,8 +577,8 @@
         <!-- Orange vertical side nav -->
         <nav class="side-nav" id="side-nav">
             <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
             <a href="#methodology">Methodology</a>
+             <a href="#design-requirements">Design Requirements</a>
             <a href="#solutions">Solutions</a>
             <a href="#whats-next">What's Next</a>
         </nav>
@@ -211,35 +586,196 @@
         <!-- Main content -->
         <main class="main-content">
 
-            <section id="problem-statement" class="content-section">
-                <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
-            </section>
+          <!-- Project Overview / TLDR -->
+          <div class="project-overview">
+            <span class="overview-label">Project Overview</span>
+            <p class="overview-abstract">Children with physical and cognitive disabilities at The Park School lacked a reliable play device that could withstand daily use and securely fit varying wheelchair tables. As Project Lead, I guided a team of four through stakeholder interviews, observations, and iterative ideation to deliver two solutions — the <strong>Social PlaySpace</strong> and the <strong>Pegboard</strong> — both of which are actively used at the school today. The process revealed a key insight: what users articulate as a need may not reflect the experience they truly hope to resolve. By looking past the stated constraint of wheelchair compatibility, we arrived at a solution the client didn't know was possible.
+            </p>
+          </div>
 
+            <section id="problem-statement" class="content-section">
+  <div class="problem-layout">
+    <!-- Left: Problem Statement -->
+    <div class="problem-text">
+      <h2>Problem Statement</h2>
+      <p>Children aged 3-22 at The Park School with physical and cognitive disabilities need a reliable customizable device that increases accessibility in leisurely play.</p>
+      <br>
+      <p>Current solutions cannot securely attach to variable wheelchair tables, place limitations on child engagement, break down during transport, and fall apart during play.</p>
+
+    </div>
+
+    <!-- Right: Two images with captions -->
+    <div class="problem-images">
+      <figure>
+        <img src="justin.jpg" alt="Current PVC Playspace" />
+        <figcaption style="color: #19823D">The current PVC Playspace solution: unstable attachment, difficult to transport, unreliable, and hard to engage.</figcaption>
+      </figure>
+      <figure>
+        <img src="slantboard.jpg" alt="Current Slantboard" />
+        <figcaption style="color: #19823D">The current Slantboard solution: not suited for all users, stationary, and limited attachment options. </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+            
+
+          <section id="methodology" class="content-section">
+  <h2>Methodology</h2>
+  <h3>Initial Steps</h3>
+              <p>After receiving a preliminary problem statement, my group dove into secondary research to learn about student abilities, exisiting solutions, wheelchair varieties, and available toys. To foster a productive team environment and establish myself as a proactive and passionate project lead, I came into the meeting with a clear agenda, flexible GANTT and RAM charts, and a running minutes document. I wanted everyone to feel confident in their role, and in me as a reliable leader, after our first team meeting. </p>
+        
+            <div class="image-banner">
+  <img src="playspaceflowchart.jpg" alt="Methodologies"/>
+  <p class="caption">A flowchart of our design process</p>
+</div>
+            
+            <h3>Observing Students and Interviewing Teachers</h3>
+<p>My team first met with stakeholders to understand the functionalities and pain points of the current solutions. After these interviews, and observations of the children using the devices, my team created a list of initial design requirements.</p>
+<br>
+            <!-- Horizontal Image Banner — place before <h3>Observations and Interviews</h3> -->
+
+  <div class="methodology-layout">
+    <!-- Left: Image -->
+    <div class="methodology-image">
+      <img src="olddesignreqsplayspace.jpg" alt="Observations and interviews" />
+    </div>
+
+   <div class="methodology-right">
+  <button class="spoiler-btn" id="spoiler-btn">⚠️ Spoiler alert! See how our design requirements changed</button>
+  <div id="spoiler-image" class="spoiler-image hidden">
+  <img src="newdesignreqsplayspace.jpg" alt="Updated design requirements" />
+  <p class="spoiler-caption">Our mockups exposed assumptions my team had made in our intial needs statements. So, we needed to revise our design requirements to encompass more solutions!</p>
+</div>
+</div>
+  </div>
+              <br>
+      
+              <h3>Ideating to Address Security, Customization, and Engagement</h3>
+
+<div class="ideation-layout">
+  <p>I led my team through multiple ideation sessions using strategies such as proposing "How might we" statements, addressing one requirement at a time, and encouraging outrageous solutions. From these sessions, we narrowed down our collection to five ideas and presented the mock ups to our clients with their respective added functionalities and potential iterations. We prepared specific questions for each mockup to explore anticipated issues and potential use cases in addition to a general set of questions to gauge likes/desires of the design.</p>
+  <img src="ideation.jpg" alt="Ideation session" class="ideation-side-img"  style="display: block; margin: 0 auto;" />
+</div>
+
+              <br>
+            <br>
+            
+              <h3>Mockup Takeaways</h3>
+            <p>Below, are the six mockups we presented to our clients at The Park School and the most influential learning that drove future iterations. </p>
+              
+<table class="requirements-table">
+  <tr>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Grooves</td>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Tubes</td>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Pegboard</td>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Strap</td>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Baking Sheet</td>
+    <td style="font-family:'Fjalla One',sans-serif; text-align:center;">Umbrella</td>
+  </tr>
+  <tr>
+    <td style="text-align:center; padding: 8px;"><img src="grooves.jpeg" alt="Grooves" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+    <td style="text-align:center; padding: 8px;"><img src="tubes.jpeg" alt="Tubes" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+    <td style="text-align:center; padding: 8px;"><img src="pegboardmockup.jpeg" alt="Pegboard" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+    <td style="text-align:center; padding: 8px;"><img src="straps.jpeg" alt="Straps" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+    <td style="text-align:center; padding: 8px;"><img src="bakingsheet.png" alt="Baking Sheet" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+    <td style="text-align:center; padding: 8px;"><img src="umbrella2.webp" alt="Umbrella" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;" /></td>
+  </tr>
+  <tr class="bottom-row">
+    <td><p>Trading badge reels for nylon string increases object permanence. Reproducibility is not a priority.
+
+</p></td><td><p>Interchangeable device is impractical; only toys should be exchanged</p></td>
+    <td><p>Security on multiple surfaces is desired.  </p></td>
+    <td><p>The solution must not be directly attached to the user’s body. </p></td>
+    <td><p>Negative space adds value for customization. </p></td>
+    <td><p>Taking away wheelchair variability and adding social component was well received. </p></td>
+  </tr>
+</table>
+              
+<div class="aha-block">
+  <span class="aha-label">AHA!</span>
+  <p>Although the client originally asked for a device suited for varying wheelchair tables, my team resolved the issue of device security by removing this variable entirely. We saw through initial constraints to address the clients true need and presented a desirable solution the client didn’t know was possible and therefore couldn’t articulate.  
+</p>
+</div>
+            <p>Through mockup feedback, we were able to learn more about our client’s desires and priorities. My team refined our design requirements based on what we uncovered before moving towards our final solutions. 
+</p>
+              
+</section>
+            
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <ul><li>Stable during heavy usage</li> 
+                    <li>Customizable for individual student needs</li>
+                    <li>Easily transported</li>
+                    <li>Easy to clean</li>
+                    <li>Safe for children</li>
+</ul>
+                </section>
 
-            <section id="methodology" class="content-section">
-                <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
-            </section>
+           <section id="solutions" class="content-section">
+  <h2>Solutions</h2>
+  <h3>The Social Playspace</h3>
+  <p>Combining the desirable aspects of our three mockups, we delivered our first solution: the Social PlaySpace.</p>
 
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <div class="designers-math">
+  <div class="math-inputs">
+    <figure>
+      <img src="umbrella2.webp" alt="Umbrella mockup" />
+      <figcaption>Umbrella</figcaption>
+    </figure>
+    <span class="math-plus">+</span>
+    <figure>
+      <img src="bakingsheet.png" alt="Baking sheet mockup" />
+      <figcaption>Baking Sheet</figcaption>
+    </figure>
+    <span class="math-plus">+</span>
+    <figure>
+      <img src="grooves.jpeg" alt="Slits mockup" />
+      <figcaption>Grooves</figcaption>
+    </figure>
+    <span class="math-equals">=</span>
+  </div>
+  <figure class="math-result">
+    <img src="playspacefinal.jpg" alt="Social PlaySpace final design" />
+    <figcaption>The Social PlaySpace</figcaption>
+  </figure>
+</div>
+               
+<h3>The Pegboard</h3>
+               <p>Identifying the opportunity to improve one of their current devices with ideas in our pegboard mockup, we delivered our second solution: the Pegboard. 
+</p>
+               
+               <div class="designers-math">
+  <div class="math-inputs">
+    <figure>
+      <img src="slantboard.jpg" alt="Mockup 1" />
+      <figcaption>Current Slantboard</figcaption>
+    </figure>
+    <span class="math-plus">+</span>
+    <figure>
+      <img src="pegboardmockup.jpeg" alt="Mockup 2" />
+      <figcaption>Pegboard</figcaption>
+    </figure>
+    <span class="math-equals">=</span>
+  </div>
+  <figure class="math-result">
+    <img src="pegboardfinal.jpg" alt="Final design" />
+    <figcaption>The Pegboard</figcaption>
+  </figure>
+</div>
+</section>
 
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
+                <p>The Park School actively uses both of our delivered solutions to engage students in leisurely play. I know because, as of January 2026, I am the active project lead for the Social PlaySpace project again. My new team and I are iterating on the previous prototype to:
+</p>
+                <ul><li>improve customization mechanisms
+
+
+
+</li><li>increase toy visibility</li><li>increase wheelchair accessibility</li><li>increase ease of transport </li></ul>
+           <p>This project taught me that what users can articulate as product needs may not best address the experience they are hoping to resolve. I hope to take this sentiment into future work by thinking about the end goal a user desires before narrowing in on a design embodiment. 
+</p>
             </section>
 
         </main>
@@ -265,6 +801,12 @@
         }
         window.addEventListener('scroll', onScroll);
         onScroll();
+   
+      document.getElementById('spoiler-btn').addEventListener('click', function() {
+  document.getElementById('spoiler-image').classList.remove('hidden');
+  this.style.display = 'none';
+});
+    
     </script>
 
 </body>
