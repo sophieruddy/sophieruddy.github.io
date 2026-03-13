@@ -18,9 +18,14 @@
             color: #19823D;
             font-size: 16px;
         }
-        h1, h2, h3, h4, h5, h6, nav a {
+        h2, h3, h4, h5, h6, nav a {
             font-family: 'Fjalla One', sans-serif;
             color: #19823D;
+        }
+        
+         h1 {
+            font-family: 'Fjalla One', sans-serif;
+            color: white;
         }
         .sticky-header {
             background-color: #19823D;
@@ -68,7 +73,7 @@
             color: rgba(25, 130, 61, 0.85);
             font-family: 'Lora', serif;
             font-size: 1.05rem;
-            max-width: 580px;
+            max-width: 3251px;
         }
         .back-btn {
             display: inline-flex;
@@ -160,6 +165,70 @@
             opacity: 0.6;
             margin: 24px 0;
         }
+     .content-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-left: 2rem;  /* add this */
+}
+
+.content-section ul li {
+  padding: 8px 0 8px 2rem;  /* reduced top/bottom padding */
+  position: relative;
+  color: #19823D;
+  font-family: 'Lora', serif;
+  line-height: 1.4;  /* tighter line height */
+}
+
+.content-section ul li::before {
+  content: '●';
+  color: #EDAD6D;
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  .grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+}
+
+.grid-2x2 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+        .section-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  border-radius: 8px;
+}
+        
+        #what-i-saw .section-img {
+  max-width: 250px;
+}
+
+#what-i-create .section-img {
+  max-width: 400px;
+}
+
+#why-include-this .section-img {
+  max-width: 700px;
+}
+        
     </style>
 </head>
 <body>
@@ -182,13 +251,14 @@
     <!-- Orange Title Block -->
     <div class="project-hero">
         <div class="project-hero-inner">
-            <a href="index.html#wow" class="back-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+            <a href="index.html#wow" class="back-btn" style="color:white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: white"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
                 Back to W.O.W.
             </a>
-            <h1>Adding Joy</h1>
-            <p>Creating a responsive circuit to enhance my brother's drinking experience</p>
-        </div>
+           <h1 style="color: white; margin-bottom: 24px;">Adding Joy</h1>
+            <p style="color:white;">I pride myself on my gift giving. A good gift requires knowing what someone wants that they wouldn't think to ask for — which, it turns out, is exactly what good design requires too. <br><br>
+                I pay attention to people's needs and do something about them. The ChugHug is evidence that, with a circuit board and some Python, the best gifts can be made without having to ask.
+            </div>
     </div>
 
     <!-- Page body: side nav + content -->
@@ -207,34 +277,49 @@
         <main class="main-content">
 
             <section id="what-i-saw" class="content-section">
-                <h2>What I Saw</h2>
-                <p>Describe what you observed — the situation, environment, or moment that caught your attention and sparked this project.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <h2>What I Saw</h2>
+  <p>My brother's birthday coming up on the calendar.</p>
+  <img src="holding.jpg" alt="What I Saw" class="section-img" /></section>
 
             <section id="what-i-thought" class="content-section">
                 <h2>What I Thought</h2>
-                <p>Share your reaction and analysis. What did this observation make you realize? What questions did it raise?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <p>I want to give my brother a unique gift. What is something he enjoys? He just joined a fraternity! 
+</p>
+               <img src="circuitflowchart.jpg" alt="What I Thought" class="section-img" /> </section>
 
             <section id="what-i-did" class="content-section">
-                <h2>What I Did</h2>
-                <p>Walk through the actions you took — how you explored, tested, built, or experimented in response to what you saw and thought.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <h2>What I Did
+                </h2>
+                <ul><li>Identified an opportunity space to create a personalized gift relevant to his current life events
+<li>Designed how my ideal circuit function for my use case - a college student chugging beer -- and selected appropriate sensors and circuit components</li>
+<li>Coded a Python program to acheive desired function </li>
 
-            <section id="what-i-created" class="content-section">
-                <h2>What I Created</h2>
-                <p>Show and describe the outcome — what you made, designed, built, or produced as a result of this experience.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+<li>Iterated code and circuit design to improve audio quality and timing </li>
 
+<li>Built a functional prototype using a Raspberry Pi, an accelerometer, an amplifier, and an audio software
+</li>
+   <li>Drew two potential embodiments that would allow the circuit to be attached to a beer can</li>             
+                </ul>
+              <img src="circuitdiagram.jpg" alt="What I Thought" class="section-img" />
+
+ </section>
+
+            <section id="what-i-create" class="content-section">
+  <h2>What I Created</h2>
+  <p>By the time I had to leave for break, I created a functional responsive circuit prototype and identified future steps. The responsive circuit sensed its own angle orientation with respect to the ground using an accelerometer. If the orientation was in an optimally tilted position for "chugging" liquid for three seconds, the speaker would activate. This three second requirement ensured that a user trying to get the last drop of thier drink would not be falsely accused of trying to chug. The audio recording of me chanting <strong>"Chug! Chug! Chug!"</strong> would play until the can was tilted less than the threshold angle again. I filmed a video of the product to show my brother; he loved the idea. <br><br>
+      While I ultimately was unable to give him the gift on his brithday, the originality and thoughtfulness of the idea spoke volumes. What I was able to produce showed how I see him, and anticipate his needs as a person, even when we're separated by distance. The time commitment I had spent working on his circuit, despite my other schoolwork, was evidence of the steps I would take to maintain our relationship.</p>
+  <div style="display:flex; gap:1rem; margin-top:1rem; max-width:500px; margin-left:auto; margin-right:auto;">
+  <img src="circuit.jpg" alt="Circuit" style="width:50%; border-radius:8px; object-fit:cover;" />
+  <img src="circuitcode.jpg" alt="Circuit Code" style="object-position: left top; width:50%; border-radius:8px; object-fit:cover;" />
+</div>
+</section>
             <section id="why-include-this" class="content-section">
                 <h2>Why Include This?</h2>
-                <p>Reflect on why this belongs in your portfolio. What does it reveal about how you think, what you care about, or who you are as a designer?</p>
-            </section>
+            <p>I am always looking to improve the lives of those around me in imaginative and unexpected ways. Being able to enhance a piece of my brother's college life is exciting in itself. But, this project showcases my ability to listen to users and translate nuanced experiences into product design features. I didn't ask my brother, "What do you want for your birthday?" I simply asked, "What's going on in your life?" and extracted user needs from there. <br> 
+                <br> This project also shows the capability and speed in which I can apply techincal skills, such as circuitry design and coding; within a five week span, I was able to take the ChugHug from a concept to a minimal viable prototype. I hope to render, 3D print, and deliver the ChugHug for my brother's next birthday.   </p>    
+                 <img src="chughugdrawn.jpg" alt="What I Thought" class="section-img" />
 
+            </section>
         </main>
     </div>
 
