@@ -43,15 +43,14 @@
             border-radius: 9999px;
             transition: background-color 0.2s ease;
         }
-        .initial-link:hover {
-            background-color: #EDAD6D;
-        }
+        .initial-link:hover { background-color: #EDAD6D; }
 
-        /* Project title block */
+        /* Hero */
         .project-hero {
-            background-color: #19823D;
-            padding-top: 86px; /* nav height */
+            background-color: #ffffff;
+            padding-top: 86px;
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +61,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +76,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +84,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -103,7 +102,7 @@
             width: 200px;
             flex-shrink: 0;
             position: sticky;
-            top: 106px; /* nav + some space */
+            top: 106px;
             padding-top: 40px;
         }
         .side-nav a {
@@ -142,8 +141,14 @@
             margin-bottom: 16px;
             color: #19823D;
         }
+        .content-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #19823D;
+        }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,11 +168,149 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+
+        /* Project overview */
+        .project-overview {
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 48px;
+            background: #19823D;
+            border-radius: 10px;
+        }
+        .project-overview .overview-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .project-overview .overview-abstract {
+            font-family: 'Lora', serif;
+            font-size: 0.97rem;
+            color: white !important;
+            line-height: 1.85;
+            margin: 0 !important;
+        }
+
+        /* Bullet lists */
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+            margin-left: 2rem;
+        }
+        .content-section ul li {
+            padding: 2px 0 2px 2rem;
+            position: relative;
+            color: #19823D !important;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+        }
+        .content-section ul li::before {
+            content: '●';
+            color: #EDAD6D !important;
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .content-section ul li strong {
+            color: #19823D !important;
+        }
+
+        /* AHA block */
+        .aha-block {
+            background-color: #EDAD6D;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .aha-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .aha-block p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            color: white !important;
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+
+        /* Two-col layout */
+        .two-col {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .two-col-text { flex: 1; }
+        .two-col-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .two-col-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Img grid 2-col */
+        .img-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Deliverable cards */
+        .deliverable-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .deliverable-card {
+            flex: 1;
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .card-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .deliverable-card p {
+            margin: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .img-grid-2 { grid-template-columns: 1fr; }
+            .deliverable-row { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Horizontal Green Nav (same as index) -->
+    <!-- Nav -->
     <header class="sticky-header">
         <nav class="mx-auto px-10 py-3 flex items-center justify-between">
             <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
@@ -182,7 +325,7 @@
         </nav>
     </header>
 
-    <!-- Project Title Block (green, under nav) -->
+    <!-- Hero -->
     <div class="project-hero">
         <div class="project-hero-inner">
             <div>
@@ -191,62 +334,157 @@
                     Back to Projects
                 </a>
                 <h1>Scaling Material Technology</h1>
-                <p>A new processing technique to increase material performance and production efficiency</p>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">October 2024 – Present</h2><br>
+                <p>Lab: Dravid Group, Northwestern University, Evanston, IL<br>
+                Role: Undergraduate Research Assistant<br>
+                <span style="white-space: nowrap;">Skills: Experimental Design, Process Optimization, Materials Research, Data Analysis, Scale-Up Methodology</span></p>
             </div>
         </div>
     </div>
 
-    <!-- Page body: side nav + content -->
+    <!-- Body -->
     <div class="page-body">
 
-        <!-- Orange vertical side nav -->
+        <!-- Side nav -->
         <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
+            <a href="#project-overview" class="active">Project Overview</a>
+            <a href="#problem-statement">Problem Statement</a>
             <a href="#methodology">Methodology</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#solution">Solution</a>
             <a href="#whats-next">What's Next</a>
         </nav>
 
         <!-- Main content -->
         <main class="main-content">
 
+            <!-- Project Overview -->
+            <section id="project-overview" class="content-section">
+                <div class="project-overview">
+                    <span class="overview-label" style="color:white">Project Overview</span>
+                    <p class="overview-abstract">As an Undergraduate Research Assistant in the Dravid Group at Northwestern, I work on taking a novel material, a modified cellulose sponge with enhanced phosphate absorption properties, closer to real-world, scalable water treatment applications. My work sits at the intersection of process design and sustainable materials science: figuring out how to prepare and deploy this material consistently, efficiently, and at a scale that makes it meaningful beyond the lab. I did not expect to find material science this compelling. But there is something genuinely exciting about standing at the edge of a technology that could have real environmental impact and asking: what does it take to get this out of the lab? That question, how to scale a novel solution without losing what makes it work, is exactly the kind of problem I want to keep solving.</p>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
             <section id="problem-statement" class="content-section">
                 <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
+
+                <p>Develop and optimize preparation and deployment methods for a novel cellulose sponge material to increase phosphate removal performance and accelerate the process from lab-scale experimentation to real-world water treatment application.</p>
+
+            </section>
+            <!-- Methodology -->
+            <section id="methodology" class="content-section">
+                
+                <h2>Methodology</h2>
+                <figure style="margin:0 0 1.5rem 0;">
+                    <img src="spongemethods.jpg" alt="Methods Flowchart" style="width:100%;"/>
+                    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">A flowchart of my design process</figcaption>
+                </figure>
+                <h3>Developing a Process</h3>
+<div class="two-col" style="align-items:center;">
+    <div class="two-col-text">
+        <p>The PhD Student I work under, Kelly Matuszewski, was interested in the uniformity and shape of the cellulose sponge in the column to slow the preferential flow of water. I started by developing a processing method to lasercut the untreated sponge, introducing a circular shape. I iterated the ideal settings on the laser cutter until I found the settings that limited sponge char to maintain materials properties similar to the control.</p>
+    </div>
+    <div class="two-col-images">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="laserandme.JPG" alt="Circular Sponges" style="height: 350px;"/></div>
+    </div>
+</div>
+              <h3>Testing the New Shape</h3>
+<p>In the first experiment, the circular sponges performed similarly to the current sponge embodiment, but neither shape reached the breakthrough point. Another test was needed to see if their was a difference in performance. After 30 minutes, the circular sponges were absorbing 95% more phosphate than the square sponges. Being part of these hands-on experiments gave me hands-on experience in a lab setting and taught me about expected practices, critically analyzing intial results, and efficient experiment design.</p>
+<div style="display:flex; justify-content:center;">
+    <figure style="margin:0;">
+        <img src="circleresultsline.JPEG" alt="Circle Results" style="height:400px;"/>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Phosphate absorption curves featuring both old (square) and new (circle) processing methods</figcaption>
+    </figure>
+</div>
+                 <h3>Proposing Independent Research Questions</h3>
+                <p>Beyond the assigned experimental work, I developed independent research questions aimed at improving the methodology itself, not just executing it. This meant looking at inefficiencies in the current process and proposing changes that could make the preparation faster, simpler, and more consistent without compromising material performance. I wanted to make the process faster so it can realistically scale to a meaningful application.</p>
+
+                
+               <div class="img-grid-2">
+    <div style="height:350px; margin:0; overflow:hidden; border-radius:8px;">
+        <img src="meinlab.JPG" alt="Me in the Lab!" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+                   <div style="height:350px; margin:0; overflow:hidden; border-radius:8px;">
+        <img src="sponge2.png" alt="Sponges of Varying Thicknesses" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+   
+</div>
+               <h3>My Own Experiment</h3>
+<p>I designed and ran an experiment to address the time it took to cut the thick sponge into layers the laser cutter can tolerate by varying thicknesses. The thicker the sponge cross-section, the less time it would take to prepare the material. The results were in line with this goal: the thickest tested cross-section performed twice as well as the next thickest which was the current accepted method and required two additional cuts; the material was absorbing 75% of phosphate bsaed on its thickness.</p>
+<figure style="margin:0;">
+    <div style="position:relative; display:inline-block; width:100%;">
+        <img src="thicknessresults.png" alt="Sponge Thickness Test Results" style="width:100%; display:block;"/>
+        <div style="position:absolute; top:0; left:0; width:100%; height:57%; border:3px solid #19823D; box-sizing:border-box;"></div>
+    </div>
+    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Thicker sponges have increased absorption rates. The table decreases in thickness as it descends.</figcaption>
+</figure>
+                
+              
+                <div class="aha-block">
+                    <span class="aha-label">AHA!</span>
+                    <p>Taking a novel solution from lab bench to real-world application is work that excites me. A solution is not meaningful until it's out in the world serving its purpose. Asking and answering small sequential questions about preparation, performace, consistency, and scalability in order to move forward is a manner I love to work in. This mix of sustainability, innovative material technology, and process design is a sweet spot for me. </p>
+                </div>
             </section>
 
+            <!-- Design Requirements -->
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
+                <p>For this material to have real-world impact, the preparation and deployment process had to meet a clear set of criteria, not just in the lab, but in conditions that could plausibly scale:</p>
+                <ul>
+                    <li>Decrease sponge variability</li>   <li>Increase phosphate absorption</li>                     <li>Decrease time to treatment column</li> 
+                </ul>
+                    </section>
+
+            <!-- Solution -->
+            <section id="solution" class="content-section">
+                <h2>Solution</h2>
+                <p>The work produced two connected outcomes: an optimized preparation process for the cellulose sponge material, and a validated performance improvement in a representative water treatment setting.</p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:1.5rem 0;">
+                    <div class="deliverable-card">
+                        <span class="card-label">Optimized Preparation Process</span>
+                        <p>A refined method for cutting cellulose sponges into uniform circular slices on the laser cutter, increasing the surface contact time of phosphates to the material.</p></div>
+                    <div class="deliverable-card">
+                        <span class="card-label">95% Improvement in Phosphate Removal</span>
+                        <p>Column experiments under representative water treatment conditions demonstrated a 95% increase in phosphate removal compared to previous methods — a meaningful performance step toward real-world application viability.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">Independent Research Proposals</span>
+                        <p>Formulated original experimental questions targeting methodology improvements, addressing inefficiencies in current processes and proposing iterative changes to make workflow faster.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">Time Savings Opportunity</span>
+                        <p>My independent experiment varying sponge cross-section thickness exposed a process choice that could reduce material preparation time, absorb 75% of phosphate, and performs twice as well as the current method.</p>
+                    </div>
+                </div>
+
+                <div style="display:flex; justify-content:center;">
+                    <figure style="margin:0;">
+                        <img src="circleresultsbar.png" alt="Circle Removal Results" style="height:400px;"/>
+                        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">The circle sponge cut outperforms existing square solutions</figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section id="methodology" class="content-section">
-                <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
-            </section>
-
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
-
+            <!-- What's Next -->
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
+                <p style="color:#19823D; line-height:1.8; margin-bottom:16px; font-family:'Lora',serif;">My research with the Dravid Group is pivoting in Spring 2026 to address a new pollutant - nitrates. Being from Iowa, nitrates in our waterways are a threat to public health and a contributor to worsening eutrophication. In the future, I will be investigating the best material to absorb nitrates from farm runoff and, using a human-centered approach, explore how this may be developed into technology that is realistic for farmers to implement on their fields.</p>
+                
+                <h3>For Me</h3>
+                <p>I did not come into this lab expecting to care about material science. I came in wanting to design and iterate a sustainable product. What I found instead was that the material itself, a cellulose sponge with the potential to meaningfully improve water quality, made process questions feel more exciting. I am genuinely passionate about innovation in the sustainability space; getting a novel solution from a lab-scale curiosity to a real-world tool takes challenging accepted methods and is the kind of work I want to do more of.</p>
+            <div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-30px">
+</div>
             </section>
+             
 
         </main>
     </div>
 
     <script>
-        // Highlight active side nav link on scroll
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.side-nav a');
 
