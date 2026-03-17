@@ -43,15 +43,14 @@
             border-radius: 9999px;
             transition: background-color 0.2s ease;
         }
-        .initial-link:hover {
-            background-color: #EDAD6D;
-        }
+        .initial-link:hover { background-color: #EDAD6D; }
 
-        /* Project title block */
+        /* Hero */
         .project-hero {
-            background-color: #19823D;
-            padding-top: 86px; /* nav height */
+            background-color: #ffffff;
+            padding-top: 86px;
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +61,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +76,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +84,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -103,7 +102,7 @@
             width: 200px;
             flex-shrink: 0;
             position: sticky;
-            top: 106px; /* nav + some space */
+            top: 106px;
             padding-top: 40px;
         }
         .side-nav a {
@@ -142,8 +141,14 @@
             margin-bottom: 16px;
             color: #19823D;
         }
+        .content-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #19823D;
+        }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,11 +168,305 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+        .placeholder-box.square {
+            aspect-ratio: 1/1;
+        }
+        .placeholder-box.tall {
+            aspect-ratio: 3/4;
+        }
+
+        /* Project overview */
+        .project-overview {
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 48px;
+            background: #19823D;
+            border-radius: 10px;
+        }
+        .project-overview .overview-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .project-overview .overview-abstract {
+            font-family: 'Lora', serif;
+            font-size: 0.97rem;
+            color: white !important;
+            line-height: 1.85;
+            margin: 0 !important;
+        }
+
+        /* Bullet lists */
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+            margin-left: 2rem;
+        }
+        .content-section ul li {
+            padding: 2px 0 2px 2rem;
+            position: relative;
+            color: #19823D !important;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+        }
+        .content-section ul li strong {
+  color: #19823D !important;
+}
+.content-section ul li::before {
+            content: '●';
+            color: #EDAD6D !important;
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* AHA block */
+        .aha-block {
+            background-color: #EDAD6D;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .aha-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .aha-block p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            color: white !important;
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+
+        /* Two-col layout for problem + images */
+        .two-col {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .two-col-text { flex: 1; }
+        .two-col-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .two-col-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Mockup grid (4 in a row) */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .mockup-grid .placeholder-box {
+            aspect-ratio: 3/4;
+            margin: 0;
+            font-size: 0.75rem;
+        }
+
+        /* App screens row */
+        .screens-row {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        .screens-row .placeholder-box {
+            flex: 1;
+            min-width: 120px;
+            aspect-ratio: 9/16;
+            margin: 0;
+            font-size: 0.7rem;
+        }
+
+        /* Feature table */
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+        }
+        .feature-table th {
+            font-family: 'Fjalla One', sans-serif;
+            background: #19823D;
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+        .feature-table td {
+            padding: 10px 14px;
+            border: 1px solid #d0e8d8;
+            color: #19823D;
+            vertical-align: top;
+        }
+        .feature-table tr:nth-child(even) td {
+            background: #f0f7f3;
+        }
+
+        /* Mockup comparison table */
+        .mockup-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+        .mockup-table td {
+            padding: 10px 12px;
+            border: 1px solid #d0e8d8;
+            color: #19823D;
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            vertical-align: top;
+            text-align: center;
+        }
+        .mockup-table .header-cell {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            background: #f0f7f3;
+        }
+        .mockup-table .label-cell {
+            font-family: 'Fjalla One', sans-serif;
+            color: #EDAD6D;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+        .mockup-table .bottom-row td {
+            border-top: 3px solid #19823D;
+        }
+        .mockup-table .bottom-row td:first-child { border-left: 3px solid #19823D; }
+        .mockup-table .bottom-row td:last-child { border-right: 3px solid #19823D; }
+        .mockup-table img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Metrics two-col */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .metric-card {
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .metric-card .metric-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .metric-card p {
+            margin: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .grid-1x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.grid-1x4 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 8px;
+}
+        
+        @media (max-width: 768px) {
+  .grid-1x4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}    
+
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .mockup-grid { grid-template-columns: repeat(2, 1fr); }
+            .metrics-grid { grid-template-columns: 1fr; }
+        }
+
+        .spoiler-btn {
+            display: inline-block;
+            padding: 0.65rem 1.2rem;
+            background-color: #EDAD6D;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 2px dashed #c8893a;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .spoiler-btn:hover { background-color: #c8893a; }
+        .spoiler-content { margin-top: 0.5rem; }
+        .spoiler-caption {
+            font-size: 0.875rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+        .hidden { display: none; }
+        .methodology-layout {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .methodology-image {
+            flex: 1;
+        }
+        .methodology-image img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .methodology-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .methodology-layout { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Horizontal Green Nav (same as index) -->
+    <!-- Nav -->
     <header class="sticky-header">
         <nav class="mx-auto px-10 py-3 flex items-center justify-between">
             <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
@@ -182,7 +481,7 @@
         </nav>
     </header>
 
-    <!-- Project Title Block (green, under nav) -->
+    <!-- Hero -->
     <div class="project-hero">
         <div class="project-hero-inner">
             <div>
@@ -191,62 +490,341 @@
                     Back to Projects
                 </a>
                 <h1>Improving Lunch</h1>
-                <p>An app to address common student frustrations with their midday meal</p>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">January 2025 – March 2025</h2><br>
+                <p><span style="white-space: nowrap;">Team: Nico Antezano, Agnes Bijole-Himes, Adwait Ganguly, Hannah Lathen</span><br>
+                Role: Communications Lead</p>
+                <span style="white-space: nowrap;">Skills Strengthened: UX/UI Design, Wireframing, Figma, User Interview Coding, Data Analysis, Problem and User Definition&nbsp;</span>
             </div>
         </div>
     </div>
 
-    <!-- Page body: side nav + content -->
+    <!-- Body -->
     <div class="page-body">
 
-        <!-- Orange vertical side nav -->
+        <!-- Side nav -->
         <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
+            <a href="#project-overview" class="active">Project Overview</a>
+            <a href="#problem-statement">Problem Statement</a>
             <a href="#methodology">Methodology</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#solution">Solution</a>
             <a href="#whats-next">What's Next</a>
         </nav>
 
         <!-- Main content -->
         <main class="main-content">
 
+            <!-- Project Overview -->
+            <section id="project-overview" class="content-section">
+                <div class="project-overview">
+                    <span class="overview-label" style="color: white">Project Overview</span>
+                    <p class="overview-abstract">Off-campus college students struggle to eat a convenient, affordable, and varied lunch amid busy schedules. As Communications Lead for a five-person team in DSGN 308, I led two rounds of primary interviews, facilitated secondary research, and co-developed a Figma prototype of <strong>coci</strong> — a social cooking app that centralizes recipe inspiration, meal organization, and grocery list generation.</p>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
             <section id="problem-statement" class="content-section">
-                <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
-            </section>
+  <h2>Problem Statement</h2>
+  <h3>Navigating Whitespace</h3>
+  <p>Our team — Pigs in a Blanket — began by brainstorming individual frustrations in our own daily routines. One thread ran through all of us: eating in the middle of the day. We set out to determine if this issue was exclusive to the five of us.</p>
+  <div class="two-col">
+    <div class="two-col-text">
+      <h3>Validating the Problem</h3>
+<p>We conducted 20 primary interviews with students, teachers, and working adults. From these interviews, we categorized common pain points by sentiment and recorded their frequency. Five prominent design opportunity spaces emerged:</p>
+<ol style="list-style: decimal; margin-left: 2rem; margin-bottom: 16px;">
+  <li style="padding: 2px 0 2px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.6;">Minimizing cost</li>
+  <li style="padding: 2px 0 2px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.6;">Minimizing prep time</li>
+  <li style="padding: 2px 0 2px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.6;">Creating an ideal social environment</li>
+  <li style="padding: 2px 0 2px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.6;">Ensuring health and variety</li>
+  <li style="padding: 2px 0 2px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.6;">Balancing work and rest</li>
+</ol>
+  </div>
+  <div class="two-col-images">
+    <figure style="margin:0;">
+        <div style="display:flex; justify-content:center;">
+            <img src="interviewqs.jpg" alt="Primary Interview Questions" style="width:320px; border-radius:8px;"/>
+        </div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Primary Interview Questions</figcaption>
+    </figure>
+  </div>
+</div>
 
-            <section id="design-requirements" class="content-section">
-                <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <!-- Flowchart centered below -->
+  <div style="max-width: 600px; margin: 0 auto 2rem auto;">
+    <img src="cocidesignopps.jpg" alt="Design Opportunities"/>
+      <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:-0.5rem;">Design Opportunities Elimination Flowchart</figcaption>
+       </div>
 
+  <!-- Power in Numbers: text left, Mintel image right -->
+  <div class="two-col" style="align-items: center;">
+    <div class="two-col-text">
+      <h3>Power in Numbers</h3>
+      <p>Secondary research on lunch habits confirmed what our interviews suggested on a broader scale: <strong>convenience</strong> is the single most important factor of lunch for consumers, and <strong>Gen Z</strong> is the generation most interested in improving their lunch experience. This data, combined with our interviews, directed us to a singular problem statement:</p>
+    </div>
+    <div class="two-col-images">
+      <figure style="margin:0;">
+        <div style="aspect-ratio: 4/3; margin:0;"><img src="mintel.png" alt="Mintel Report Data" style="width:100%;"/></div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Mintel Report: lunch consumer data</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="aha-block">
+    <span class="aha-label">Problem Statement</span>
+    <p>A cost-effective strategy or device to help off-campus college students aged 18–26 maximize the convenience of their lunch meal.</p>
+  </div>
+</section>
+            <!-- Methodology -->
             <section id="methodology" class="content-section">
                 <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
+        
+                <figure style="margin:0 0 1.5rem 0;">
+                    <img src="cocimethods.jpg" alt="Methods Flowchart" style="width:100%;"/>
+                    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">A flowchart of our design process</figcaption>
+                </figure>
+    
+                <h3>Primary Interviews</h3>
+                <p>We first identified themes from 20 primary interviews of various user groups. After narrowing our focus to college students, we returned with refined questions targeting current solutions, desired areas of improvement, and their ideal lunch experience.
+                    For efficiency we utilized ChatGPT to report the most common solutions' functionalities and pitfalls. Additional secondary research into current solutions propelled us to our design requirements that addressed unmet needs. </p>
+                <div class="methodology-layout">
+                    <div class="methodology-image">
+                        <figure style="margin:0;">
+                            <img src="cocioldreqs.jpg" alt="Design Requirements" style="width:100%; border-radius:8px; object-fit:cover;" />
+                            <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Initial Design Requirements</figcaption>
+                        </figure>
+                    </div>
+                    <div class="methodology-right">
+                        <button class="spoiler-btn" id="dr-spoiler-btn">⚠️ Spoiler alert! See how our design requirements changed</button>
+                        <div id="dr-spoiler-content" class="spoiler-content hidden">
+                           <img src="newcocireqs.jpg" alt="Final Coci Design Requirements"/>
+                            <p style="font-size:.85rem">We redefined "improving user experience" after additional primary interviews.</p>
+                        </div>
+                    </div>
+                </div>
+                      <h3>Ideation: Generating &amp; Eliminating</h3>
+                <p>A group ideation session resulted in concepts spanning three identified categories: storage solutions, meal prep apps, and shopping tools. To quantitavely evaluate our ideas, we eliminated any solution that failed to address at least two of our defined needs. The surviving ideas were formally rated in a numeric Design Alternatives Matrix.</p>
+                <figure style="margin:0 0 1.5rem 0;">
+                    <img src="designaltmatrix.png" alt="Design Alternatives Matrix" style="width:100%;"/>
+                    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Design Alternatives Matrix</figcaption>
+                </figure>
+               
+                <div class="aha-block">
+                    <span class="aha-label">AHA!</span>
+                    <p>My favorite idea from ideation never made it to a mockup; the Design Alternatives Matrix eliminated it by forcing an honest, criteria-driven evaluation that my individual interest couldn't argue with. The process revealed that a great idea isn't always the right solution for a user's current needs.</p>
+                </div>
+
+               <h3>Four Mockups, One Decision</h3>
+<p>The four highest scoring ideas were mocked up for additional user testing:</p>
+<ol style="list-style: decimal; margin-left: 2rem; margin-bottom: 16px;">
+    <li style="padding: 3px 0 3px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.7;">Home-Cooking App</li>
+    <li style="padding: 3px 0 3px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.7;">NU Lunch Hub — refrigerated lockers on campus</li>
+    <li style="padding: 3px 0 3px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.7;">OZZI Meal Plan — dining hall leftovers packaged for takeaway</li>
+    <li style="padding: 3px 0 3px 0.5rem; color: #19823D; font-family: 'Lora', serif; line-height: 1.7;">Optimal Grocery Path App</li>
+</ol>
+<p>Each was developed with key features, needs addressed, and specific feedback questions. We presented all four to 15 off-campus students and met with Stacey Brown, Director of NU Dining, to assess feasibility of the campus-based solutions.</p>
+                <div class="grid-1x4">
+  <figure style="margin:0;">
+    <img src="cocimockup.png" alt="Home Cooking App" />
+    <figcaption style="text-align:center; font-size:0.8rem; color:#19823D; margin-top:0.4rem;">Home-Cooking App</figcaption>
+  </figure>
+  <figure style="margin:0;">
+    <img src="lunchhub.png" alt="NU Lunch Hub" style="object-position: left center;" />
+    <figcaption style="text-align:center; font-size:0.8rem; color:#19823D; margin-top:0.4rem;">NU Lunch Hub</figcaption>
+  </figure>
+  <figure style="margin:0;">
+    <img src="ozzi.png" alt="Ozzi Meal Plan" />
+    <figcaption style="text-align:center; font-size:0.8rem; color:#19823D; margin-top:0.4rem;">OZZI Meal Plan</figcaption>
+  </figure>
+  <figure style="margin:0;">
+    <img src="optimal%20grocery%20path.png" alt="Optimal Grocery Path" />
+    <figcaption style="text-align:center; font-size:0.8rem; color:#19823D; margin-top:0.4rem;">Optimal Grocery Path App</figcaption>
+  </figure>
+</div> 
+
+                <p>Following feedback, the OZZI solution was eliminated — it would have redirected dining hall leftovers away from Campus Kitchen, a student group that donates food to community shelters, and we were not comfortable with that tradeoff. The frequency analysis of in-person testing made the path forward clear:</p>
+
+                <table class="mockup-table">
+                    <tr>
+                        <td class="header-cell">Solution</td>
+                        <td class="header-cell">Would Use</td>
+                        <td class="header-cell">Wouldn't Use</td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Home-Cooking App</td>
+                        <td><strong>15</strong></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">NU Lunch Hub</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Optimal Grocery Path App</td>
+                        <td>5</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:-0.5rem;">Number of students who would use each mockup if it were a real-world solution</p>
+
             </section>
 
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
+            <!-- Design Requirements -->
+            <section id="design-requirements" class="content-section">
+                <h2>Design Requirements</h2>
+                <p>After more clearly defining "improve user experience with lunch," we revised our design requirements; our solution needed to: </p>
+                <ul>
+                    <li>Increase variety in meals</li>
+                    <li>Increase convenience</li>
+                    <li>Reduce cost</li>
+                    <li>Reduce time spent preparing lunch</li>
+                    <li>Reduce mental effort</li>
+                </ul>
+
+                 </section>
+
+            <!-- Solution -->
+            <section id="solution" class="content-section">
+                <h2>Solution</h2>
+                <h3>coci — Convenient Organized Cooking Inspiration</h3>
+                <p>Named after the Spanish word <em>cocinar</em> (to cook), coci is a mobile app that provides accessible cooking inspiration, organized recipe storage, and time-sensitive grocery list generation. It is built around five features designed to reduce the mental and logistical burden of cooking at home. We incorporated the optimal grocery path functionality from our other mockup as it was highly desirable to users, but not enough to warrant a whole app.&nbsp;</p>
+
+                <div><img src="cocioverview.png" alt="coci Home Cooking App"/></div>
+
+                <div><img src="cocitoolbar.png" alt="coci Taskbar"/></div>
+                <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">coci's Five Features</p>
+                <h3>The Five Features</h3>
+
+                <!-- Feature: Profile -->
+                <div style="display:flex; gap:2rem; align-items:center; margin:2rem 0;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="screens-row" style="margin:0;">
+                            <div style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cociprofile1.png" alt="coci Profile Lists"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cociprofile2.png" alt="coci Profile Sortinng Options"/></div>
+                            <div style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cociprofile3.png" alt="coci Profile Recipe Page"/></div>
+                        </div>
+                        <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">Users organize saved recipes into lists, sortable by time, cost, rating, or cuisine.</p>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                        <p style="font-family:'Fjalla One',sans-serif; font-size:1.1rem; margin-bottom:0.5rem;">Profile</p>
+                        <p style="font-size:0.85rem; font-family:'Fjalla One',sans-serif; color:#EDAD6D; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">Needs Addressed</p>
+                        <ul style="margin-left:1rem;">
+                            <li>Increases convenience</li>
+                            <li>Reduces decision fatigue</li>
+                            <li>Reduces prep time</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature: Find -->
+                <div style="display:flex; gap:2rem; align-items:center; margin:2rem 0;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="screens-row" style="margin:0;">
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocifind1.png" alt="coci Find"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocifind2.png" alt="coci Find Friend's Profile"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocifind3.png" alt="coci Find Friend's Ranked Lists"/></div>
+                        </div>
+                        <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">A feed of recipes posted by people the user follows, with the ability to save, comment, and add ingredients to their grocery list.</p>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                        <p style="font-family:'Fjalla One',sans-serif; font-size:1.1rem; margin-bottom:0.5rem;">Find</p>
+                        <p style="font-size:0.85rem; font-family:'Fjalla One',sans-serif; color:#EDAD6D; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">Needs Addressed</p>
+                        <ul style="margin-left:1rem;">
+                            <li>Increases variety in meals</li>
+                            <li>Reduces mental effort</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature: Search / Explore -->
+                <div style="display:flex; gap:2rem; align-items:center; margin:2rem 0;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="screens-row" style="margin:0;">
+                            <img src="coci.png" alt="Search" style="height:400px;"/></div>
+                        <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">Browse trending and recommended recipes and search for specific dishes or creators.</p>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                        <p style="font-family:'Fjalla One',sans-serif; font-size:1.1rem; margin-bottom:0.5rem;">Search / Explore</p>
+                        <p style="font-size:0.85rem; font-family:'Fjalla One',sans-serif; color:#EDAD6D; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">Needs Addressed</p>
+                        <ul style="margin-left:1rem;">
+                            <li>Increases variety in meals</li>
+                            <li>Increases convenience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature: Post -->
+                <div style="display:flex; gap:2rem; align-items:center; margin:2rem 0;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="screens-row" style="margin:0;">
+                           <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocipost1.png" alt="coci Example Post"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocipost2.png" alt="coci Post List Selection"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="cocipost3.png" alt="coci Post Ranking"/></div>
+                       </div>
+                        <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">Upload recipes (manually or via URL import) and rank them against previous recipes using a 1v1 comparison system inspired by beli.</p>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                        <p style="font-family:'Fjalla One',sans-serif; font-size:1.1rem; margin-bottom:0.5rem;">Post</p>
+                        <p style="font-size:0.85rem; font-family:'Fjalla One',sans-serif; color:#EDAD6D; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">Needs Addressed</p>
+                        <ul style="margin-left:1rem;">
+                            
+                            <li>Increases convenience</li>
+                            <li>Reduces mental effort</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature: Grocery List -->
+                <div style="display:flex; gap:2rem; align-items:center; margin:2rem 0;">
+                    <div style="flex:1; min-width:0;">
+                        <div class="screens-row" style="margin:0;">
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="grocery1.png" alt="coci Grocery List from Recipe"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="grocery2.png" alt="coci Grocery List"/></div>
+                            <div  style="aspect-ratio:9/16; flex:1; min-width:90px; margin:0; font-size:0.65rem;"><img src="grocery3.png" alt="coci Optimal Grocery Path"/></div>
+                          </div>
+                        <p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.5rem; margin-bottom:0;">Add ingredients from any recipe directly to a grocery list, adjust servings, select what you need, and see which nearby stores are cheapest and fastest.</p>
+                    </div>
+                    <div style="flex:1; min-width:0;">
+                        <p style="font-family:'Fjalla One',sans-serif; font-size:1.1rem; margin-bottom:0.5rem;">Grocery List</p>
+                        <p style="font-size:0.85rem; font-family:'Fjalla One',sans-serif; color:#EDAD6D; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">Needs Addressed</p>
+                        <ul style="margin-left:1rem;">
+                            <li>Reduces cost</li>
+                            <li>Reduces time spent preparing lunch</li>
+                            <li>Reduces mental effort</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
+            <!-- What's Next -->
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
-            </section>
+                <p>Pigs in a Blanket delivered a final Figma prototype and is not continuing development of coci. However, we outlined a clear path for a future team:</p>
+
+                <h3>Immediate Next Steps</h3>
+                <ul>
+                    <li>Develop coci as a minimum viable product</li>
+                    <li>Launch a pilot test with Northwestern students</li>
+                    <li>Track performance against quantitative benchmarks</li>
+                </ul>
+
+                <h3>Features We Left Out (On Purpose)</h3>
+                <p>Several desired features were intentionally excluded because they did not directly satisfy our defined needs: a weekly meal planner, fitness app compatibility, and private posting. These are clear candidates for a future iteration once the core app has proven its value.</p>
+
+<h3>For Me</h3>
+<p>This Whitespace Project provided necessary experience in identifying the needs that serve a population. Each individual had nuanced opinions
+    on their lunch experience, but our goal as designers was to create a representative solution that best served the needs of our target demographic, not just one individual. 
+    Finding a unique opportunity space proved to be difficult, but deliberately crafting and clearly defining our problem statement, user persona, and design requirements allowed us to focus our design and its features on what mattered most for our target demographic's needs.
+</p>
+<div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-20px;">
+</div>
+                </section>
 
         </main>
     </div>
 
     <script>
-        // Highlight active side nav link on scroll
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.side-nav a');
 
@@ -265,6 +843,11 @@
         }
         window.addEventListener('scroll', onScroll);
         onScroll();
+
+        document.getElementById('dr-spoiler-btn').addEventListener('click', function() {
+            document.getElementById('dr-spoiler-content').classList.remove('hidden');
+            this.style.display = 'none';
+        });
     </script>
 
 </body>

@@ -43,15 +43,14 @@
             border-radius: 9999px;
             transition: background-color 0.2s ease;
         }
-        .initial-link:hover {
-            background-color: #EDAD6D;
-        }
+        .initial-link:hover { background-color: #EDAD6D; }
 
-        /* Project title block */
+        /* Hero */
         .project-hero {
-            background-color: #19823D;
-            padding-top: 86px; /* nav height */
+            background-color: #ffffff;
+            padding-top: 86px;
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +61,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +76,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +84,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -103,7 +102,7 @@
             width: 200px;
             flex-shrink: 0;
             position: sticky;
-            top: 106px; /* nav + some space */
+            top: 106px;
             padding-top: 40px;
         }
         .side-nav a {
@@ -142,8 +141,14 @@
             margin-bottom: 16px;
             color: #19823D;
         }
+        .content-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #19823D;
+        }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,11 +168,205 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+
+        /* Project overview */
+        .project-overview {
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 48px;
+            background: #19823D;
+            border-radius: 10px;
+        }
+        .project-overview .overview-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .project-overview .overview-abstract {
+            font-family: 'Lora', serif;
+            font-size: 0.97rem;
+            color: white !important;
+            line-height: 1.85;
+            margin: 0 !important;
+        }
+
+        /* Bullet lists */
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+            margin-left: 2rem;
+        }
+        .content-section ul li {
+            padding: 2px 0 2px 2rem;
+            position: relative;
+            color: #19823D;
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+        }
+        .content-section ul li::before {
+            content: '●';
+            color: #EDAD6D;
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* AHA block */
+        .aha-block {
+            background-color: #EDAD6D;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .aha-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .aha-block p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            color: white !important;
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+
+        /* Two-col layout */
+        .two-col {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .two-col-text { flex: 1; }
+        .two-col-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .two-col-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Process step cards */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .process-card {
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.1rem 1.2rem;
+        }
+        .process-card .step-num {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.6rem;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.3rem;
+            line-height: 1;
+        }
+        .process-card .step-title {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            color: #19823D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .process-card p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0 !important;
+        }
+
+        /* Img grid 2-col */
+        .img-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Deliverable cards */
+        .deliverable-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .deliverable-card {
+            flex: 1;
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .card-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .deliverable-card p {
+            margin: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+        }
+        .comparison-table th {
+            font-family: 'Fjalla One', sans-serif;
+            background: #19823D;
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid #d0e8d8;
+            color: #19823D;
+            vertical-align: top;
+        }
+        .comparison-table tr:nth-child(even) td {
+            background: #f0f7f3;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .process-steps { grid-template-columns: 1fr; }
+            .img-grid-2 { grid-template-columns: 1fr; }
+            .deliverable-row { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Horizontal Green Nav (same as index) -->
+    <!-- Nav -->
     <header class="sticky-header">
         <nav class="mx-auto px-10 py-3 flex items-center justify-between">
             <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
@@ -182,7 +381,7 @@
         </nav>
     </header>
 
-    <!-- Project Title Block (green, under nav) -->
+    <!-- Hero -->
     <div class="project-hero">
         <div class="project-hero-inner">
             <div>
@@ -191,62 +390,157 @@
                     Back to Projects
                 </a>
                 <h1>Outperforming Competitor Packaging</h1>
-                <p>A set of recommendations to optimize cost informed by landscape analysis and consumer preferences</p>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">June 2025 – August 2025</h2><br>
+                <p>Company: Procter &amp; Gamble, Mason, OH<br>
+                Role: Research &amp; Design Engineering Intern<br>
+                <span style="white-space: nowrap;">Skills: Landscape Analysis, Consumer Testing, Data Analysis, Cross-Functional Decision Frameworks</span><br>
+                <span style="white-space: nowrap;">Note: Details are protected under NDA</span></p>
             </div>
         </div>
     </div>
 
-    <!-- Page body: side nav + content -->
+    <!-- Body -->
     <div class="page-body">
 
-        <!-- Orange vertical side nav -->
+        <!-- Side nav -->
         <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
+            <a href="#project-overview" class="active">Project Overview</a>
+            <a href="#problem-statement">Problem Statement</a>
             <a href="#methodology">Methodology</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#solution">Solution</a>
             <a href="#whats-next">What's Next</a>
         </nav>
 
         <!-- Main content -->
         <main class="main-content">
 
+            <!-- Project Overview -->
+            <section id="project-overview" class="content-section">
+                <div class="project-overview">
+                    <span class="overview-label" style="color:white">Project Overview</span>
+                    <p class="overview-abstract">As a Research and Design Engineering Intern at Procter &amp; Gamble, I led a competitor packaging landscape analysis to identify where P&amp;G had opportunities to optimize cost, surfacing approximately $500K in potential savings without sacrificing manufacturability or competitive edge on the shelf. The work required synthesizing technical packaging data, consumer testing insights, and cross-functional constraints into actionable recommendations for live development decisions. Here, I learned how strategic assumptions and asking for guidance could help navigate ambiguous data, rather than waiting for certainty in variables that was never going to arrive.</p>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
             <section id="problem-statement" class="content-section">
                 <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
+
+                <div class="two-col">
+                    <div class="two-col-text">
+    
+                        <p>Conduct a competitor analysis to inform a set of packaging recommendations that optimize cost via design and manufacturing choices without sacrificing shelf quality or effective display next to competitors.&nbsp;</p>
+        
+                    </div>
+                </div>
             </section>
 
+            <!-- Methodology -->
+            <section id="methodology" class="content-section">
+    <h2>Methodology</h2>
+    <figure style="margin:0 0 1.5rem 0;">
+        <img src="pgmethods.jpg" alt="Methods Flowchart" style="width:100%;"/>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">A flowchart of my design process</figcaption>
+    </figure>
+
+               <h3>Competitor Analysis</h3>
+        <p>I systematically evaluated competitor packaging approaches across product categories and hierarchies relevant to P&amp;G's development priorities — sustainable materials, production methods, shelf presentation, and cost signals. The goal was to identify the specific decisions competitors had made that P&amp;G hadn't, and ask whether those decisions were worth exploring more deeply.</p>
+  <img src="comparingbrands.jpg" alt="Competitor Analysis"/>
+    
+                
+   <h3>Navigating Ambiguous Data</h3>
+<p>While considering packaging change recommendations based on competitor analysis, the data environment to perform my cost savings analysis was noisier than I expected. Cost figures varied by source, changing volumes, and time period. Early in the project, this ambiguity caused me to stall — waiting for better data before committing to a direction. I learned that this was the wrong instinct, and instead worked to make explicit assumptions that eliminated variables, validate these assumptions, and move forward.</p>
+<div style="display:flex; justify-content:flex-end;">
+    <img src="uncertainty.jpg" alt="" style="width:150px; opacity:0.85; margin-bottom:-15px; margin-top:-20px">
+</div>
+
+
+                <div class="aha-block">
+                    <span class="aha-label">AHA!</span>
+                    <p>Restricting variable data to a standard definition prevents paralysis in noisy data situations. Making a defensible assumption, naming it out loud, and knowing when to ask for guidance rather would've prevented me from rerunning the numbers. I identified a better strategy to move forward, and stopped getting tied up in ambiguous data.</p>
+                </div>
+    
+                <div style="display:flex; gap:40px; align-items:center;">
+
+  <!-- Left: text -->
+  <div style="flex:1;">
+    <h3>Consumer Testing</h3>
+    <p>Data about packaging only tells part of the story. I developed and led consumer-facing testing to assess how packaging decisions actually read to users in practice — specifically to challenge assumptions that had been made about consumer perception. The gap between users preference and company assumptions is one of the most expensive places to be wrong.</p>
+    <p>I analyzed my results qualitatively and quantitatively to paint a better picture for my final set of recommendations.</p>
+  </div>
+
+  <!-- Right: image -->
+  <div style="flex:1; display:flex; justify-content:center; align-items:center;">
+    <img src="shelf.jpeg" alt="Crest Shelf Display" style="max-width:100%; border-radius:8px;"/>
+  </div>
+
+</div>
+
+                <h3>Relearning for a Fresh Angle</h3>
+               <p>As I was putting together my analysis, I realized I had overlooked a crucial angle because I didn't take time to fully understand technical processes early on. I tried to backtrack, but I did not have time to thoroughly extract meaningful insights from the data set from this perspective. </p>
+                
+                <div class="aha-block">
+                    <span class="aha-label">AHA!</span>
+                    <p>Digging deep into existing processes, technology, and data — and understanding <em>why</em> things work the way they do — is not a warmup for the real work. It is the real work. Every time I skipped it, I paid for it later. Thorough upfront learning isn't slow. It's the fastest path to a recommendation that doesn't get sent back.</p>
+                </div>
+                
+                <h3>Validating Cross-Functionally</h3>
+                <p>After formulating my recommendations, I confirmed their feasibility and applicability across relevant teams to ensure they could be acted on after I left. While doing so, I recognized a need for better documentation that aligned cost tradeoff expectations among teams and developed documentation to anticipate and ease this experience in the future.</p>
+
+                <div style="display:flex; justify-content:center;">
+    <img src="holdinghands.jpg" alt="Working Together" style="height:150px; border-radius:8px;"/>
+</div>
+            </section>
+
+            <!-- Design Requirements -->
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                
+                <p>Recommendations had to satisfy all four teams reviewing them — brand, engineering, manufacturing, and design — each of whom evaluated proposals through a different lens. Therefore, holistic recommendations needed to be:</p>
+                <ul><li>Cost effective</li><li>Manufacturable</li><li>Competitive on the shelf</li><li>Consumer-centered</li><li>In-line with product vision</li></ul>
+               </section>
 
-            <section id="methodology" class="content-section">
-                <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
-            </section>
+            <!-- Solution -->
+            <section id="solution" class="content-section">
+                <h2>Solution</h2>
+                <p>The project produced two distinct deliverables — the landscape analysis and resulting packaging recommendations, and a cross-functional decision guide that addressed a communication gap I identified independently.</p>
 
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <div class="deliverable-row">
+                    <div class="deliverable-card">
+                        <span class="card-label">Landscape Analysis &amp; Cost Saving Recommendations</span>
+                        <p>A competitor packaging analysis identifying approximately $500K in potential cost savings through specific manufacturing and design opportunities — each in the context of competitor choices.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">Cross-Functional Decision Guide</span>
+                        <p>A reference tool developed after I identified that brand, engineering, and design teams were operating from their priorities instead of a holistic evaluation of how packaging decisions affect cost and shelf quality. The guide clarified those tradeoffs in plain language, reducing circular processes that hindered design progress.</p>
+                    </div>
+                </div>
 
+               <h3>The Decision Guide</h3>
+<p>The decision guide was not part of my original scope. I noticed while carrying out my recommendations that misalignment across teams was creating friction that slowed progress down. Teams were evaluating proposals through their specific mental models and goals without a shared understanding of the tradeoffs involved. I built the guide to address that gap directly: a clear, accessible reference that aligned brand, engineering, and design on how packaging choices affect cost. I also standardized the document by eliminating the influence of variable quotes and volumes.</p>
+<p>This was one of the pieces of work I was most proud of, not because it was technically complex, but because it required me to notice a structural problem that wasn't mine to solve, and decide to address it anyway.</p>
+<div style="display:flex; justify-content:center;">
+    <img src="quality.jpeg" alt="I put the I in quality!" style="height:400px; border-radius:8px; margin-bottom: 20px;"/>
+</div>
+<br>
+            <!-- What's Next -->
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
-            </section>
+                <p>The recommendations and decision guide were delivered to the cross-functional team before the end of my internship and were intended for use in live packaging development decisions. The cost-saving opportunities identified are subject to P&amp;G's internal validation and procurement processes before implementation.</p>
 
+                <h3>For Me</h3>
+                <p>I'm walking away from this experience with two distinct lessons as a designer. The first is the value of in-depth technical learning up-front. Analytical instincts only go so far when vast processes have extensive context and forethought. Misunderstandings about existing processes and technology bled into my recommendations, costing me time I could have spent moving forward. I now treat the upfront learning phase as non-negotiable. <br><br>
+                    The second is about navigating ambiguity: I spent too long early on waiting for comprehensive and "accurate" data; large datasets are always changing and have several limitations. Instead, I learned strategies to extract meaningful insights from given data, name my assumptions explicitly, and ask for a gut-check from someone with more context. Once I made this decision, the number of re-calculations I performed decreased greatly.</p>
+            <div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-30px">
+</div>
+            </section>
+            </section>
         </main>
     </div>
 
     <script>
-        // Highlight active side nav link on scroll
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.side-nav a');
 

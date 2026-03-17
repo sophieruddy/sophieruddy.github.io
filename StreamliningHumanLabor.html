@@ -43,15 +43,14 @@
             border-radius: 9999px;
             transition: background-color 0.2s ease;
         }
-        .initial-link:hover {
-            background-color: #EDAD6D;
-        }
+        .initial-link:hover { background-color: #EDAD6D; }
 
-        /* Project title block */
+        /* Hero */
         .project-hero {
-            background-color: #19823D;
-            padding-top: 86px; /* nav height */
+            background-color: #ffffff;
+            padding-top: 86px;
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +61,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +76,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +84,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -103,7 +102,7 @@
             width: 200px;
             flex-shrink: 0;
             position: sticky;
-            top: 106px; /* nav + some space */
+            top: 106px;
             padding-top: 40px;
         }
         .side-nav a {
@@ -142,8 +141,14 @@
             margin-bottom: 16px;
             color: #19823D;
         }
+        .content-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #19823D;
+        }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,11 +168,223 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+
+        /* Project overview — green with white text */
+        .project-overview {
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 48px;
+            background: #19823D;
+            border-radius: 10px;
+        }
+        .project-overview .overview-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .project-overview .overview-abstract {
+            font-family: 'Lora', serif;
+            font-size: 0.97rem;
+            color: white !important;
+            line-height: 1.85;
+            margin: 0 !important;
+        }
+
+        /* Bullet lists */
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+            margin-left: 2rem;
+            color: #19823D;
+        }
+        .content-section ul li {
+            padding: 2px 0 2px 2rem;
+            position: relative;
+            color: #19823D !important;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+        }
+        .content-section ul li strong {
+  color: #19823D !important;
+}
+.content-section ul li::before {
+            content: '●';
+            color: #EDAD6D !important;
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* AHA block */
+        .aha-block {
+            background-color: #EDAD6D;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .aha-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .aha-block p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            color: white !important;
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+
+        /* Two-col layout */
+        .two-col {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .two-col-text { flex: 1; }
+        .two-col-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .two-col-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Process step cards */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .process-card {
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.1rem 1.2rem;
+        }
+        .process-card .step-num {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.6rem;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.3rem;
+            line-height: 1;
+        }
+        .process-card .step-title {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            color: #19823D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .process-card p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0 !important;
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+        }
+        .comparison-table th {
+            font-family: 'Fjalla One', sans-serif;
+            background: #19823D;
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid #d0e8d8;
+            color: #19823D;
+            vertical-align: top;
+        }
+        .comparison-table tr:nth-child(even) td {
+            background: #f0f7f3;
+        }
+
+        /* Image grid for mockups */
+        .img-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .img-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .img-grid-2 .placeholder-box,
+        .img-grid-3 .placeholder-box {
+            margin: 0;
+            aspect-ratio: 4/3;
+            font-size: 0.75rem;
+        }
+
+        /* Deliverable callout */
+        .deliverable-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .deliverable-card {
+            flex: 1;
+            border-left: 4px solid #EDAD6D;
+            padding: 1rem 1.25rem;
+            background: #f0f7f3;
+            border-radius: 0 8px 8px 0;
+        }
+        .deliverable-card .card-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .deliverable-card p {
+            margin: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .process-steps { grid-template-columns: 1fr; }
+            .img-grid-2, .img-grid-3 { grid-template-columns: 1fr; }
+            .deliverable-row { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Horizontal Green Nav (same as index) -->
+    <!-- Nav -->
     <header class="sticky-header">
         <nav class="mx-auto px-10 py-3 flex items-center justify-between">
             <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
@@ -182,7 +399,7 @@
         </nav>
     </header>
 
-    <!-- Project Title Block (green, under nav) -->
+    <!-- Hero -->
     <div class="project-hero">
         <div class="project-hero-inner">
             <div>
@@ -191,62 +408,230 @@
                     Back to Projects
                 </a>
                 <h1>Streamlining Human Labor</h1>
-                <p>An improved operational procedure to decrease packaging time</p>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">April 2024 – June 2024</h2><br>
+                <p>Client: nLabs, Evanston, IL</p>
+                <p>Team: Maya Howard, Nineth Kanieski Koso, Taewon Yoon<br>
+                Role: Assembly Strategy Lead<br>
+                <span style="white-space: nowrap;">Skills: Process Optimization Design, User Observation, Project Managment, Journey Mapping</span></p>
             </div>
         </div>
     </div>
 
-    <!-- Page body: side nav + content -->
+    <!-- Body -->
     <div class="page-body">
 
-        <!-- Orange vertical side nav -->
+        <!-- Side nav -->
         <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
+            <a href="#project-overview" class="active">Project Overview</a>
+            <a href="#problem-statement">Problem Statement</a>
             <a href="#methodology">Methodology</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#solution">Solution</a>
             <a href="#whats-next">What's Next</a>
         </nav>
 
         <!-- Main content -->
         <main class="main-content">
 
+            <!-- Project Overview -->
+            <section id="project-overview" class="content-section">
+                <div class="project-overview">
+                    <span class="overview-label" style="color: white">Project Overview</span>
+                    <p class="overview-abstract">Nick Marchuk and Angela Mercurio spend their summers hand-packaging 300 electronic kits for Northwestern engineering students — a process averaging just five kits per person per hour. As part of a four-person DTC team, I led the development of a redesigned assembly workflowthat replaced bagging processes with a cart-and-cup system, reducing labor time significantly. This project reaffirmed something I already suspected about myself: I am drawn to human-centered processes, and I find genuine satisfaction in locating and analyzing decisions that were made once and never questioned or revisited.</p>
+                </div>
+                    </section>
+
+            <!-- Problem Statement -->
             <section id="problem-statement" class="content-section">
                 <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
+<p>Nick and Angelo Mercurio need process change recommendations to reduce the packaging time of 300 circuit kits for Northwestern Engineering students. </p>
             </section>
 
+            <!-- Methodology -->
+            <section id="methodology" class="content-section">
+    <h2>Methodology</h2>
+    <figure style="margin:0 0 1.5rem 0;">
+        <img src="dtcmethodsflow.jpg" alt="Methods Flowchart" style="width:100%;"/>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">A flowchart of our design process</figcaption>
+    </figure>
+ <div style="display:flex; gap:40px; align-items:center;">
+  
+  <!-- Left: text content -->
+  <div style="flex:1;">
+    <h3>The Pain Points</h3>
+    <p>I took the lead on developing user interview guides and observational situations to come away with optimal insights on Nick's current processes. From our initial partner interview and observation session, we identified the most time-consuming and physically straining steps:</p>
+    <ul>
+      <li style="color: #19823D"><strong>Resistors:</strong> Cut by hand from a spool using scissors — 11 different values, 10 resistors each — resulting in hand cramping and frequent miscounts</li>
+      <li><strong>Plastic bags:</strong> Four small snack-size bags per kit, each needing to be opened, carefully filled, and resealed — an awkward, slow process</li>
+      <li><strong>LEDs:</strong> Picked out one by one from loose bins by color, poked hands, and were frequently miscounted</li>
+      <li><strong>Assembly flow:</strong> Nick walked around a large table holding a kit box, picking up one component at a time — an inefficient circuit that multiplied with every kit</li>
+    </ul>
+
+  </div>
+
+  <!-- Right: image -->
+  <figure style="flex:0 0 380px; margin:0;">
+    <img src="dtckitcomponents.jpg" alt="Kit Components" style="width:100%; border-radius:8px; object-fit:cover; height:400px">
+    <figcaption style="text-align:center; font-size:0.8rem; color:#19823D; margin-top:8px; font-family:'Lora', serif;">Components included in each circuit kit</figcaption>
+  </figure>
+     
+
+</div>   
+                 <div class="aha-block">
+      <span class="aha-label">AHA!</span>
+      <p>This project is where I discovered my love for introducing purposeful design to human-centered processes. Creating an answer to  "why is this method used?" is an assignment I found surprisingly enthralling. Asking questions within the gap of "how it's done" and "how it could be done" is exactly where I want to work.</p>
+    </div>
+                
+                <h3>From Observation to Mockups</h3>
+                <p>We brought four mockup concepts to Nick for feedback based on our observations: a resistor cutter, a wearable workspace tray, a packaging change, and an LED sorter. Nick tested each one. The user testing guide and interview strategies I implemented facilitated meaningful conversation to understand benefits and shortcomings of our mockup's through our user's eyes.
+               <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; margin:1.5rem 0; align-items:center;">
+    <figure style="margin:0;">
+        <div  style="aspect-ratio:4/3; margin:0;"><img src="resistorcuttermockup.jpg" alt="Resistor Cutter Mockup"/></div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Resistor Cutter</figcaption>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="wearableworkspace.jpg" alt="Wearable Workspace"/></div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Wearable Workspace Tray</figcaption>
+    </figure>
+    <figure style="margin:0;">
+        <div  style="aspect-ratio:4/3; margin:0;"><img src="ziplocbags.jpg" alt="Packaging Change"/></div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Packaging Change</figcaption>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="ledsorter.jpg" alt="LED Sorter Mockup"/></div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">LED Sorter</figcaption>
+    </figure>
+</div>
+
+                <p> Of these mockups, three of four concepts proved to be practical for Nick's implementation, the resistor cutter, the workspace tray, and the packaging change. While some concepts were liked, Nick raised concerns with the packaging change's end-user experience and the ability to move around the space while sporting the Wearable Workspace. So, the tray and packaging mockups were iterated to increase maneuverability and reliability respectively in the final assembly flow.  </p>
+               
+            </section>
+
+            <!-- Design Requirements -->
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
+                <p>After partner interviews, observation sessions, and mockup feedback, any changes made to the packaging workflow had to work towards all three design requirements: </p>
+<ul><li style="color: #19823D">Increase total efficiency from five kits per person per hour</li><li>Safe to use without strain from repetition</li><li>Optimize particular component packaging method by reducing time for </li></ul>
+        
+             </section>
+
+            <!-- Solution -->
+            <section id="solution" class="content-section">
+                <h2>Solution</h2>
+                <p>Our team delivered two solutions. I led the development of the Assembly Strategy. The Resistor Cutter — an automated Raspberry Pi-powered device — was developed primarily by my teammate Taewon and represents a significant technical deliverable. While it was ideated together based on team insights to best address the design requirements, Taewon took the lead on product development.</p>
+
+                <div class="deliverable-row">
+                    <div class="deliverable-card">
+                        <span class="card-label">My Focus — Assembly Strategy</span>
+                        <p>A redesigned packaging workflow using a rolling cart, solo cups, and sandwich-sized bags to dramatically reduce physical repetition and setup time.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">Team Deliverable — Resistor Cutter</span>
+                        <p>An automated device that cuts resistor strips to length on command, allowing Nick and Angela to step away and work on other tasks while it runs.</p>
+                    </div>
+                </div>
+
+                <h3>The Assembly Strategy</h3>
+<p>The core insight behind the assembly strategy was simple: reduce the number of trips, reduce the number of bag openings, and reduce the physical setup for each kit. Three components made this possible together:</p>
+<ul><li>The Bag Change</li><li>The Cup Grid</li><li>The Cart</li></ul>
+<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin:1.5rem 0; align-items:center;">
+    <figure style="margin:0;">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="dtcflow1.png" alt="Final Flowchart 1" style="width:100%;"/></div>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="dtcflow2.png" alt="Final Flowchart 2" style="width:100%;"/></div>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:4/3; margin:0;"><img src="dtcflow3.png" alt="Final Flowchart 3" style="width:100%;"/></div>
+    </figure>
+</div>
+<p style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:-0.5rem;">Our Final Deliverable: the Full Assembly Flowchart</p>
+                <h3>The Bag Change</h3>
+                <div class="two-col" style="align-items: center;">
+                    <div class="two-col-text">
+                        <p>The first change was replacing four small snack-sized bags with one sandwich-sized bag. Previously, Nick had to open, fill, and seal four separate bags per kit, carefully manipulating components into the narrow opening. One larger bag limits this process to a single streamlined open-and-close. </p>
+                       <br> <p>Four empty small bags are still included in each kit so students can organize their own components, preserving the end-user experience without the packaging burden.</p>
+                    </div>
+                    <div class="two-col-images">
+                        <div style="aspect-ratio: 4/3; margin:0; "><img src="dtcbagchange.jpg" alt="Bag Change" style="height: 300px; object-position:top;"/></div>
+                    </div>
+                </div>
+
+    
+<h3>The Cup System</h3>
+<div class="two-col" style="align-items: center;">
+    <div class="two-col-text">
+        <p>Solo cups act as hands-free bag holders. Nick never has to hold a bag open while filling it; he now has both hands free to drop in components. The grid of 25 cups laid out also more visibly tracks component progression compared to Nick's previous process.</p>
+    </div>
+    <div style="display:flex; gap:1rem; flex:1;">
+        <div style="aspect-ratio: 4/3; margin:0; flex:1;">
+            <img src="bagincup.jpg" alt="Bag in Cup" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+        <div style="aspect-ratio: 4/3; margin:0; flex:2; display:flex; align-items:center; justify-content:center;">
+            <img src="dtccupgrid.jpg" alt="Cup Grid" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+    </div>
+</div>
+        
+                <h3>The Cart</h3>
+<p>A table-height rolling cart carries up to eight bins of components at once. Two people position themselves on opposite sides of the cart, each loading their 25 cups with the four bins on their side. When those components are loaded, the cart flips to load the other four components. The cart eliminates trips between a central supply and the kits that defined the old process.</p>
+<div class="img-grid-2">
+    <div style="aspect-ratio: 4/3; margin:0; overflow:hidden; border-radius:8px;">
+        <img src="dtccart.jpg" alt="Cart Layout" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+    <div style="aspect-ratio: 4/3; margin:0; overflow:hidden; border-radius:8px;">
+        <img src="mayaandme.jpg" alt="Cart Used with Two People" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+</div>
+
+                <h3> Workflow Changes Summary</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Task</th>
+                        <th>Old Method</th>
+                        <th>New Method</th>
+                    </tr>
+                    <tr>
+                        <td>Bags per kit</td>
+                        <td>4 small bags — open, fill, seal each</td>
+                        <td>1 sandwich bag — open, fill, seal once</td>
+                    </tr>
+                    <tr>
+                        <td>Bag filling</td>
+                        <td>Hold narrow-mouthed bag open with one hand while filling</td>
+                        <td>Cup holds large-mouthed bag open — both hands free</td>
+                    </tr>
+                    <tr>
+                        <td>Component transport</td>
+                        <td>Walk around table carrying 1 component bin at a time</td>
+                        <td>Cart carries 8 bins; 2 people load simultaneously</td>
+                    </tr>
+                    <tr>
+                        <td>Resistor cutting</td>
+                        <td>Hand-cut with scissors, prone to miscounting and cramping</td>
+                        <td>Automated resistor cutter runs independently in background while other tasks are completed</td>
+                    </tr>
+                </table>
             </section>
 
-            <section id="methodology" class="content-section">
-                <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
-            </section>
-
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
-
+            <!-- What's Next -->
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
+                <p>The assembly strategy was designed for immediate implementation; Nick and Angela could adopt it the next time they packed kits. Time trials comparing the two methods would be the next step in validating the solution. 
+                    From there additional time analysis could expose bottlenecks and pain points for further ideation and iteration. The resistor cutter, as a functional prototype, had several identified areas for technical improvement before it was ready for packing.</p>
+            
+                <h3>For Me</h3>
+                <p>I've always been optimizing my own processes: packing graduation thank yous, my morning routine, doing my laundry. This project confirmed that analyzing and streamlining human-centered processes is something I genuinely enjoy, and can be done professionally. What energized me most wasn't the solution; but the process of noticing the assembly flow that had never really been designed, just accumulated - how things had always been done. Peeling back those unexamined decisions and asking "why is this the method?" is where I find the most interesting design problems. And the answers, more often than not, require initimately understanding how the person living inside the process sees their work — not just observing it from the outside.</p>
+           <div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-20px;">
+</div>
             </section>
+           
 
         </main>
     </div>
 
     <script>
-        // Highlight active side nav link on scroll
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.side-nav a');
 

@@ -4,7 +4,7 @@
     <link rel="icon" href="tabguy.jpeg" type="image/jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anticipating User Desires — Sophie Ruddy</title>
+    <title>AuriMod — Sophie Ruddy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,15 +43,14 @@
             border-radius: 9999px;
             transition: background-color 0.2s ease;
         }
-        .initial-link:hover {
-            background-color: #EDAD6D;
-        }
+        .initial-link:hover { background-color: #EDAD6D; }
 
-        /* Project title block */
+        /* Hero */
         .project-hero {
-            background-color: #19823D;
-            padding-top: 86px; /* nav height */
+            background-color: #ffffff;
+            padding-top: 86px;
             padding-bottom: 40px;
+            border-bottom: 3px solid #19823D;
         }
         .project-hero-inner {
             max-width: 1100px;
@@ -62,13 +61,13 @@
             gap: 32px;
         }
         .project-hero h1 {
-            color: white;
+            color: #19823D;
             font-size: 3rem;
             line-height: 1.1;
             margin-bottom: 12px;
         }
         .project-hero p {
-            color: rgba(255,255,255,0.85);
+            color: #19823D;
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             max-width: 580px;
@@ -77,7 +76,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.75);
+            color: #EDAD6D;
             font-family: 'Fjalla One', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 0.05em;
@@ -85,7 +84,7 @@
             margin-bottom: 20px;
             transition: color 0.2s;
         }
-        .back-btn:hover { color: #EDAD6D; }
+        .back-btn:hover { color: #19823D; }
         .back-btn svg { width: 16px; height: 16px; }
 
         /* Layout */
@@ -103,7 +102,7 @@
             width: 200px;
             flex-shrink: 0;
             position: sticky;
-            top: 106px; /* nav + some space */
+            top: 106px;
             padding-top: 40px;
         }
         .side-nav a {
@@ -142,8 +141,14 @@
             margin-bottom: 16px;
             color: #19823D;
         }
+        .content-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #19823D;
+        }
         .content-section p {
-            color: #333;
+            color: #19823D;
             line-height: 1.8;
             margin-bottom: 16px;
             font-family: 'Lora', serif;
@@ -163,11 +168,205 @@
             opacity: 0.5;
             margin: 24px 0;
         }
+
+        /* Project overview */
+        .project-overview {
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 48px;
+            background: #19823D;
+            border-radius: 10px;
+        }
+        .project-overview .overview-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .project-overview .overview-abstract {
+            font-family: 'Lora', serif;
+            font-size: 0.97rem;
+            color: white !important;
+            line-height: 1.85;
+            margin: 0 !important;
+        }
+
+        /* Bullet lists */
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+            margin-left: 2rem;
+        }
+        .content-section ul li {
+            padding: 2px 0 2px 2rem;
+            position: relative;
+            color: #19823D;
+            font-family: 'Lora', serif;
+            line-height: 1.4;
+        }
+        .content-section ul li::before {
+            content: '●';
+            color: #EDAD6D;
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* AHA block */
+        .aha-block {
+            background-color: #EDAD6D;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .aha-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .aha-block p {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            color: white !important;
+            line-height: 1.7;
+            margin: 0 !important;
+        }
+
+        /* Two-col layout */
+        .two-col {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .two-col-text { flex: 1; }
+        .two-col-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .two-col-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Process step cards */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .process-card {
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.1rem 1.2rem;
+        }
+        .process-card .step-num {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1.6rem;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.3rem;
+            line-height: 1;
+        }
+        .process-card .step-title {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.9rem;
+            color: #19823D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .process-card p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0 !important;
+        }
+
+        /* Img grid 2-col */
+        .img-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Deliverable cards */
+        .deliverable-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .deliverable-card {
+            flex: 1;
+            border: 2px solid #d0e8d8;
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .card-label {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EDAD6D;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .deliverable-card p {
+            margin: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+        }
+        .comparison-table th {
+            font-family: 'Fjalla One', sans-serif;
+            background: #19823D;
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .comparison-table td {
+            padding: 10px 14px;
+            border: 1px solid #d0e8d8;
+            color: #19823D;
+            vertical-align: top;
+        }
+        .comparison-table tr:nth-child(even) td {
+            background: #f0f7f3;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .process-steps { grid-template-columns: 1fr; }
+            .img-grid-2 { grid-template-columns: 1fr; }
+            .deliverable-row { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Horizontal Green Nav (same as index) -->
+    <!-- Nav -->
     <header class="sticky-header">
         <nav class="mx-auto px-10 py-3 flex items-center justify-between">
             <a href="index.html#top" class="logo-box initial-link flex-shrink-0 mr-8">
@@ -182,7 +381,7 @@
         </nav>
     </header>
 
-    <!-- Project Title Block (green, under nav) -->
+    <!-- Hero -->
     <div class="project-hero">
         <div class="project-hero-inner">
             <div>
@@ -190,63 +389,174 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
                     Back to Projects
                 </a>
-                <h1>Anticipating User Desires</h1>
-                <p>An exploration into biotech lifestyle devices to inform product design and strategy</p>
+                <h1>AuriMod</h1>
+                <h2 style="color: #EDAD6D; font-size: 1.8rem">September 2025 – December 2025</h2><br>
+                <p>Company: AuriMod, Vienna, Austria<br>
+                Role: Products Research &amp; Design Intern<br>
+                <span style="white-space: nowrap;">Skills: Benchmarking, User Definition, Product Strategy, Rapid Prototyping, Journey Mapping</span><br>
+                <span style="white-space: nowrap;">Note: Details are protected under an NDA</span></p>
             </div>
         </div>
     </div>
 
-    <!-- Page body: side nav + content -->
+    <!-- Body -->
     <div class="page-body">
 
-        <!-- Orange vertical side nav -->
+        <!-- Side nav -->
         <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#design-requirements">Design Requirements</a>
+            <a href="#project-overview" class="active">Project Overview</a>
+            <a href="#problem-statement">Problem Statement</a>
             <a href="#methodology">Methodology</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#design-requirements">Design Requirements</a>
+            <a href="#solution">Solution</a>
             <a href="#whats-next">What's Next</a>
         </nav>
 
         <!-- Main content -->
         <main class="main-content">
 
+            <!-- Project Overview -->
+            <section id="project-overview" class="content-section">
+                <div class="project-overview">
+                    <span class="overview-label" style="color:white">Project Overview</span>
+                    <p class="overview-abstract">AuriMod is a biotechnology startup based in Vienna, Austria developing a new-to-world device in an emerging product category: vagus nerve stimulation. As a Products Research and Design Intern, I owned early-stage product discovery — conducting benchmarking analysis of 12+ biomedical products, leading user research, and synthesizing insights into strategic recommendations that directly shaped product development decisions. The most important thing I learned wasn't about the market. It was about what it means to do good work inside someone else's vision: the product I believed in most didn't align with where leadership was taking the company, and contributing meaningfully meant understanding their use case and redirecting my efforts to align with their goals.</p>
+                </div>
+            </section>
+
+            <!-- Problem Statement -->
             <section id="problem-statement" class="content-section">
                 <h2>Problem Statement</h2>
-                <p>Add your problem statement content here. Describe the challenge that was identified, the context surrounding it, and why it was worth solving.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Continue with additional context or background research that shaped the understanding of the problem.</p>
-            </section>
+<p> Conduct a landscape analysis of existing products to identify similar products' strengths, unmet needs, and user desires; with these findings, develop user testing material that extracts additional insights from potentials clients and present more pleasing alternative mechanical prototype/packaging solutions. </p>
+                
 
+            <!-- Methodology -->
+<!-- Methodology -->
+<section id="methodology" class="content-section">
+    <h2>Methodology</h2>
+    <figure style="margin:0 0 1.5rem 0;">
+        <img src="aurimodmethods.jpg" alt="Methods Flowchart" style="width:100%;"/>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">A flowchart of my design process</figcaption>
+    </figure>
+    <div class="two-col" style="align-items:center;">
+        <div class="two-col-text;">
+            <h3>Benchmarking Existing Products</h3>
+<p>Defining the landscape meant identifying adjacent products, understanding where they fell short, and locating the gaps that a new-to-world solution could credibly fill. I also identified products with use cases that fell far outside the biotechnology realm, but featured similar functionalities mechanically that, if beneficial to user experience, could be implemented into mechanical design.</p>
+<p>I delivered two documents featuring the pros and cons of design choices that, dependent on unique use cases, achieved different product functions; one document targeted products in the same space and one document focused on seemingly unrelated products with surprisingly similar design.</p>
+        </div>
+        <div class="two-col-images" style="align-items:center;">
+            <figure style="max-width:250px; margin:0 auto;">
+                <img src="aurimod.png" alt="Current Device on the Market" style="width:100%;"/>
+                <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">AuriMod's current product</figcaption>
+            </figure>
+        </div>
+    </div>
+
+             <h3>Journey Mapping and User Definition</h3>
+<p>As I went to iterate the prototype, I independently realized there was not a clear vision among the R&amp;D team of who we were designing for. So, I took initiative and built a potential journey map for this product's use case, highlighting potential pain points that the landscape analysis shed light on. Based on these pain points, I created six nuanced use cases with three user personas each. I presented a select handful of these user personas to leadership to discuss who they saw this product serving and in doing so align R&amp;D and the executive team.</p>
+<figure style="margin:0;">
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin:1.5rem 0; align-items:center;">
+        <div style="aspect-ratio:4/3; width:100%;"><img src="headacheman.jpg" alt="User Persona Example" style="width:100%; height:100%; object-fit:cover;"/></div>
+        <div style="aspect-ratio:4/3; width:100%;"><img src="workingwoman.jpg" alt="User Persona Example" style="width:100%; height:100%; object-fit:cover;"/></div>
+        <div style="aspect-ratio:4/3; width:100%;"><img src="overnightnurse.webp" alt="User Persona Example" style="width:100%; height:100%; object-fit:cover;"/></div>
+    </div>
+    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:-0.5rem;">User persona examples</figcaption>
+</figure>
+                
+                
+                <h3>Getting to Users Directly</h3>
+                <p>I developed user testing guides dependent on AuriMod's desired learnings and use case specific questions to lead interviews and focus groups with potential users. This process strengthed my ethnographic skills by developing open-ended questions that would generate the most meanignful conversation about unmet needs, the unarticulated frustrations, and preferred functionalities, uncovering what people actually do rather than what they think they want. The gap between those two answers is where the most useful product insights tend to live.</p>
+
+    <div style="display:flex; justify-content:center;">
+    <img src="roundtable.jpg" alt="User Interviews" style="height:200px; border-radius:8px;"/>
+</div>
+
+                <h3>From Insights to Recommendations</h3>
+               <p>I synthesized qualitative and quantitative insights to drive product recommendations for the future that I would not have time for, which I presented to leadership. However, I also practiced my rapid prototying by producing new mechanical designs of the product that iterated on the existing prototype, informed by my takeaways from talking to users.</p>
+
+                <div class="aha-block">
+                    <span class="aha-label">AHA!</span>
+                    <p>My analysis pointed toward a product direction I found compelling, but it wasn't the direction leadership was pursuing. Understanding why required getting close to their perspective: learning their use case, understanding the persona they were designing for, and recognizing that my job wasn't to redirect the company. It was to make their vision as strong as possible.</p>   </div>
+
+                   </section>
+
+            <!-- Design Requirements -->
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
-                <p>Outline the criteria and constraints that guided the design process. What did a successful solution need to achieve? What were the boundaries within which you had to work?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <p>My research documentation, user testing guides, recommendations, and protoype iterations, needed to: </p>
+                <ul><li>Grounded in user desires</li><li>Differentiated from market</li><li>Actionable for future team</li><li>Provides clear additional learning opportunities</li></ul>
 
-            <section id="methodology" class="content-section">
-                <h2>Methodology</h2>
-                <p>Walk through your design process — how you approached the problem, what methods you used to gather insights, ideate, prototype, and test.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-                <p>Additional methodology details, diagrams, or process documentation can go here.</p>
-            </section>
+                   </section>
 
-            <section id="solutions" class="content-section">
-                <h2>Solutions</h2>
-                <p>Present the final solution(s) you arrived at. What did you build or recommend? How does it address the problem statement and meet the design requirements?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+            <!-- Solution -->
+            <section id="solution" class="content-section">
+                <h2>Solution</h2>
+                <p>My work at AuriMod spanned the full early-stage discovery process — from landscape analysis through user research to prototype iteration. The through-line was always the same: get as close to the real user and the real market as possible before making recommendations, and make sure every recommendation has a clear line back to evidence. Through these deliverables, I better aligned cross-functional teams that had become disconnected at the startup.</p>
 
+                <div class="deliverable-row">
+                    <div class="deliverable-card">
+                        <span class="card-label">Benchmarking Analysis</span>
+                        <p>Systematic evaluation of 12+ biomedical products produced two deliverable documents exploring dimensions of functional performance, usability, and market positioning, identifying technical strengths, gaps, and opportunities in the emerging product landscape and supplemental informative designs.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">User Research</span>
+                        <p>Designed and led interviews, surveys, and focus groups to capture unmet needs and functional requirements directly from users, translating behavioral observations into concrete product insights.</p>
+                    </div>
+                    <div class="deliverable-card">
+                        <span class="card-label">Strategic Recommendations</span>
+                        <p>Synthesized research findings into defined performance metrics and prototype iteration direction, giving the development team an evidence-based foundation for early-stage product decisions.</p>
+                    </div>
+                </div>
+
+              <h3>Working in a Cross-Cultural Startup Environment</h3>
+<p>AuriMod operates as a fast-paced, cross-cultural R&amp;D team based in Vienna. Contributing effectively meant adapting to a different working cadence, communicating across language and cultural context, and moving quickly with limited resources and high ambiguity. The startup environment compressed the distance between research and decision-making: findings fed directly into live development conversations, not future planning decks. I also used this opportunity to build community and learn more about the culture I was experiencing by facilitating cultural discussions during the workday.</p>
+
+<!-- 3 vertical images -->
+<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin:1.5rem auto; align-items:center; max-width:600px;">
+    <figure style="margin:0;">
+        <div style="aspect-ratio:3/4; overflow:hidden; border-radius:8px;">
+            <img src="office.jpeg" alt="Viennese Office" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">The R&amp;D team office</figcaption>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:3/4; overflow:hidden; border-radius:8px;">
+            <img src="vienna.jpeg" alt="St. Stephen's" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">St. Stephen's Cathedral</figcaption>
+    </figure>
+    <figure style="margin:0;">
+        <div style="aspect-ratio:3/4; overflow:hidden; border-radius:8px;">
+            <img src="darts.jpeg" alt="Darts" style="width:100%; height:100%; object-fit:cover;"/>
+        </div>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">As for my darts skills...</figcaption>
+    </figure>
+</div>
+
+<!-- 1 horizontal image below -->
+<figure style="margin:0 auto 1.5rem auto; max-width:600px;">
+    <div style="aspect-ratio:16/9; overflow:hidden; border-radius:8px;">
+        <img src="thanksgiving.jpeg" alt="Thanksgiving Abroad" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+    <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">The Thanksgiving dinner I coordinated for my coworkers!</figcaption>
+</figure>
+            <!-- What's Next -->
             <section id="whats-next" class="content-section">
                 <h2>What's Next</h2>
-                <p>Describe future directions for this project. What would you do with more time, resources, or data? What open questions remain?</p>
-            </section>
+                <p>AuriMod is continuing to develop the product through the prototype iteration cycle informed by the research and requirements work completed during my internship. My most critical contribution to the team was re-aligning R&amp;D and leadership by asking questions and shedding light on an crucial, yet overlooked, design consideration - the target user experience. They are now designing for the same user. </p>
 
+                <h3>For Me</h3>
+                <p>I came into this internship confident in my ability to analyze a landscape and identify the strongest product direction, and I did that. What I didn't expect was having to devalue some of my individual design principles to contribute to the company's direction. Making an effort to better understand leadership's use case and vision, and then running hard with that vision, turned out to be where I grew the most.
+           I also walked away better darts competitor and with an appreciation for an international work culture.</p>
+                </section>
+            </section>
+            <div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-40px">
+</div>
+            </section>
         </main>
     </div>
 
     <script>
-        // Highlight active side nav link on scroll
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.side-nav a');
 

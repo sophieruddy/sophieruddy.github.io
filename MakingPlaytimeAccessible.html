@@ -389,14 +389,17 @@
 .content-section ul li {
   padding: 2px 0 2px 2rem;  /* reduced top/bottom padding */
   position: relative;
-  color: #19823D;
+  color: #19823D !important;
   font-family: 'Lora', serif;
-  line-height: 1.4;  /* tighter line height */
+  line-height: 1.8;  /* tighter line height */
 }
 
+.content-section ul li strong {
+  color: #19823D !important;
+}
 .content-section ul li::before {
   content: '●';
-  color: #EDAD6D;
+  color: #EDAD6D !important;
   position: absolute;
   left: 0;
   font-size: 0.75rem;
@@ -564,8 +567,10 @@
                 </a>
                 <h1>Making Playtime Accessible</h1>
                 <h2 style="color: #EDAD6D; font-size: 1.8rem">January 2025 - Present</h2> <br>
-                <p> Team: Christina Feng, Christian Oscar-Ramierez, Hayden Williams
+              <p>Client: The Park School, Evanston, IL</p>  
+              <p> Team: Christina Feng, Christian Oscar-Ramierez, Hayden Williams
 <br>Role: Project Lead
+                  <br><span style="white-space: nowrap;"> Skills Strengthened: Project Management, Iterative Human-Centered Design, User Research, Design Fabrication </span>
 </p>
             </div>
         </div>
@@ -575,24 +580,27 @@
     <div class="page-body">
 
         <!-- Orange vertical side nav -->
-        <nav class="side-nav" id="side-nav">
-            <a href="#problem-statement" class="active">Problem Statement</a>
-            <a href="#methodology">Methodology</a>
-             <a href="#design-requirements">Design Requirements</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#whats-next">What's Next</a>
-        </nav>
+        <!-- Orange vertical side nav -->
+<nav class="side-nav" id="side-nav">
+  <a href="#project-overview-real">Project Overview</a>
+  <a href="#problem-statement">Problem Statement</a>
+  <a href="#methodology">Methodology</a>
+  <a href="#design-requirements">Design Requirements</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#whats-next">What's Next</a>
+</nav>
 
         <!-- Main content -->
-        <main class="main-content">
+<main class="main-content">
 
-          <!-- Project Overview / TLDR -->
-          <div class="project-overview">
-            <span class="overview-label">Project Overview</span>
-            <p class="overview-abstract">Children with physical and cognitive disabilities at The Park School lacked a reliable play device that could withstand daily use and securely fit varying wheelchair tables. As Project Lead, I guided a team of four through stakeholder interviews, observations, and iterative ideation to deliver two solutions — the <strong>Social PlaySpace</strong> and the <strong>Pegboard</strong> — both of which are actively used at the school today. The process revealed a key insight: what users articulate as a need may not reflect the experience they truly hope to resolve. By looking past the stated constraint of wheelchair compatibility, we arrived at a solution the client didn't know was possible.
-            </p>
-          </div>
-
+  <!-- Project Overview / TLDR -->
+  <section id="project-overview-real" class="content-section">
+    <div class="project-overview">
+      <span class="overview-label">Project Overview</span>
+      <p class="overview-abstract">Children with physical and cognitive disabilities at The Park School lacked a reliable play device that could withstand daily use and securely fit varying wheelchair tables. As Project Lead, I guided a team of four through stakeholder interviews, observations, and iterative ideation to deliver two solutions — the Social PlaySpace and the Pegboard — both of which are actively used at the school today. The process revealed a key insight: what users articulate as a need may not reflect the experience they truly hope to resolve. By looking past the stated constraint of wheelchair compatibility, we arrived at a solution the client didn't know was possible.</p>
+    </div>
+  </section>
+  
             <section id="problem-statement" class="content-section">
   <div class="problem-layout">
     <!-- Left: Problem Statement -->
@@ -636,10 +644,13 @@
             <!-- Horizontal Image Banner — place before <h3>Observations and Interviews</h3> -->
 
   <div class="methodology-layout">
-    <!-- Left: Image -->
-    <div class="methodology-image">
-      <img src="olddesignreqsplayspace.jpg" alt="Observations and interviews" />
-    </div>
+  <!-- Left: Image -->
+<div class="methodology-image">
+    <figure style="margin:0;">
+        <img src="olddesignreqsplayspace.jpg" alt="Observations and interviews" style="width:100%; border-radius:8px;"/>
+        <figcaption style="text-align:center; font-size:0.85rem; color:#19823D; margin-top:0.4rem;">Our initial design requirements</figcaption>
+    </figure>
+</div>
 
    <div class="methodology-right">
   <button class="spoiler-btn" id="spoiler-btn">⚠️ Spoiler alert! See how our design requirements changed</button>
@@ -662,7 +673,7 @@
             <br>
             
               <h3>Mockup Takeaways</h3>
-            <p>Below, are the six mockups we presented to our clients at The Park School and the most influential learning that drove future iterations. </p>
+            <p>Below, are the six mockups we presented to our clients at The Park School and the most influential learnings that drove future iterations. </p>
               
 <table class="requirements-table">
   <tr>
@@ -704,6 +715,7 @@
             
             <section id="design-requirements" class="content-section">
                 <h2>Design Requirements</h2>
+              <p>After our client interviews and observations, it became clear our intial requirements were too restrictive. Our new requirements addressed The Park School's true needs:</p>
                 <ul><li>Stable during heavy usage</li> 
                     <li>Customizable for individual student needs</li>
                     <li>Easily transported</li>
@@ -776,6 +788,9 @@
 </li><li>increase toy visibility</li><li>increase wheelchair accessibility</li><li>increase ease of transport </li></ul>
            <p>This project taught me that what users can articulate as product needs may not best address the experience they are hoping to resolve. I hope to take this sentiment into future work by thinking about the end goal a user desires before narrowing in on a design embodiment. 
 </p>
+              <div style="display: flex; justify-content: flex-end;">
+    <img src="walkingaway.jpg" alt="" style="width: 200px; opacity: 0.85; margin-top:-20px">
+</div>
             </section>
 
         </main>

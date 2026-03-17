@@ -4,7 +4,7 @@
     <link rel="icon" href="tabguy.jpeg" type="image/jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dishwashing Faster — Sophie Ruddy</title>
+    <title>Optimizing Efficiency — Sophie Ruddy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,14 @@
             color: #19823D;
             font-size: 16px;
         }
-        h1, h2, h3, h4, h5, h6, nav a {
+        h2, h3, h4, h5, h6, nav a {
             font-family: 'Fjalla One', sans-serif;
             color: #19823D;
+        }
+        
+         h1 {
+            font-family: 'Fjalla One', sans-serif;
+            color: white;
         }
         .sticky-header {
             background-color: #19823D;
@@ -68,7 +73,7 @@
             color: rgba(25, 130, 61, 0.85);
             font-family: 'Lora', serif;
             font-size: 1.05rem;
-            max-width: 580px;
+            max-width: 3251px;
         }
         .back-btn {
             display: inline-flex;
@@ -160,6 +165,92 @@
             opacity: 0.6;
             margin: 24px 0;
         }
+     .content-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-left: 2rem;  /* add this */
+}
+
+.content-section ul li {
+  padding: 8px 0 8px 2rem;  /* reduced top/bottom padding */
+  position: relative;
+  color: #19823D !important;
+  font-family: 'Lora', serif;
+  line-height: 1.8;  /* tighter line height */
+}
+
+.content-section ul li strong {
+  color: #19823D !important;
+}
+.content-section ul li::before {
+  content: '●';
+  color: #EDAD6D !important;
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  .grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+}
+
+.grid-2x2 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+        .section-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  border-radius: 8px;
+}
+        
+        #what-i-saw .section-img {
+  max-width: 500px;
+}
+
+#what-i-create .section-img {
+  max-width: 400px;
+}
+
+#why-include-this .section-img {
+  max-width: 700px;
+}
+        
+.grid-1x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.grid-1x4 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid-1x4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}        
     </style>
 </head>
 <body>
@@ -180,14 +271,17 @@
     </header>
 
     <!-- Orange Title Block -->
+    <!-- Orange Title Block -->
     <div class="project-hero">
         <div class="project-hero-inner">
-            <a href="index.html#wow" class="back-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+            <a href="index.html#wow" class="back-btn" style="color:white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: white"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
                 Back to W.O.W.
             </a>
-            <h1>Dishwashing Faster</h1>
-            <p>Increasing the efficiency of a new commercial dishwashing line</p>
+            <h1 style="color: white; margin-bottom: 24px;">Optimizing Efficiency</h1>
+            <p style="color:white;">Some design work I take on unassigned; here, a two week stint washing dishes at summer camp presented a genuine, unscripted moment of me doing what I always do: seeing a broken process and being unable to leave it alone.</p>
+            <br>
+            <p style="color:white;">My desire to streamline processes proved to be instinctual, my ability to rally a team around the most obscure goals undeniable, and my love for Camp Foster YMCA inexpressible.</p>
         </div>
     </div>
 
@@ -207,34 +301,64 @@
         <main class="main-content">
 
             <section id="what-i-saw" class="content-section">
-                <h2>What I Saw</h2>
-                <p>Describe what you observed — the situation, environment, or moment that caught your attention and sparked this project.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <h2>What I Saw</h2>
+  <p>A new commercial dishwashing line with plenty of bottlenecks and no established approach to streamline the process. It was the first week this kitchen was put to use.</p>
+  <img src="dishpic.jpg" alt="What I Saw" class="section-img" style="width:60%" /></section>
 
             <section id="what-i-thought" class="content-section">
-                <h2>What I Thought</h2>
-                <p>Share your reaction and analysis. What did this observation make you realize? What questions did it raise?</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+  <h2>What I Thought</h2>
+  <p>If we can make the dishwashing process faster, I can get out and enjoy more of camp's magic!</p>
+
+  <div style="display:flex; gap:1rem; margin-top:1rem; max-width:700px; margin-left:auto; margin-right:auto; justify-content:center; align-items:center;">
+    <img src="paddle.JPEG" alt="Paddle" style="width:33%; border-radius:8px; object-fit:cover;" />
+      <img src="bench.JPEG" alt="Bench" style="width:33%; border-radius:8px; object-fit:cover;" />
+      <img src="weenieman.JPEG" alt="Weenie Man" style="width:33%; border-radius:8px; object-fit:cover;" />
+      
+          </div>
+</section>
 
             <section id="what-i-did" class="content-section">
-                <h2>What I Did</h2>
-                <p>Walk through the actions you took — how you explored, tested, built, or experimented in response to what you saw and thought.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+                <h2>What I Did
+                </h2>
+                <ul><li>Identified bottlenecks throughout the newly implemented dishwashing line </li>
+                    <li>Recognized the strengths of my four teammates and specialized assigned tasks to enhance speed accordingly</li>
+<li>Introduced new methods, at least daily, to integrate into our existing best practices including optimized dish locations, movement patterns, and removal strategies</li>
+<li>Recorded time to completion for each meal, tracking our progress throughout the week</li>
 
-            <section id="what-i-created" class="content-section">
-                <h2>What I Created</h2>
-                <p>Show and describe the outcome — what you made, designed, built, or produced as a result of this experience.</p>
-                <div class="placeholder-box">Image / Figure Placeholder</div>
-            </section>
+<li>Recruited my teammates to invest in this improvement process and compete against ourselves, increasing morale and excitement surrounding a typically mundane task</li>
+         <li>Led a new set of teammates by providing insights from the previous week, anticipating novice issues, and adjusting techniques to better accomodate the new group dynamic</li>
+                </ul>
+<div style="display:flex; gap:8px; margin-top:16px; align-items:center;">
+  <img src="dishconveyor.jpg" alt="Dish Conveyor Belt Flow" style="width:50%; height:300px; border-radius:8px; object-fit:contain; margin-bottom:60px;" />
+  <img src="dishcart.jpg" alt="Dish Cart" style="width:30%; height:300px; border-radius:8px; object-fit:contain; object-position:left top; margin-top:60px;" />
+  <img src="dishtopview.jpg" alt="Circuit Code" style="width:20%; height:300px; border-radius:8px; object-fit:contain; object-position:left top; margin-top:60px;" />
+</div>
+ </section>
 
+            <section id="what-i-create" class="content-section">
+  <h2>What I Created</h2>
+  <p>By the end of week one, me and my fellow Dish Dawgs had reduced our total dishwashing time by over 50%! We had overcome the learning curve of an entirely new
+  system and implemented new practices that became standard to save time. The next summer as a counselor, I watched as strategies I had suggested in real time the previous summer were still being used by individuals in the Dawg Pound. 
+  These time-saving processes allowed me to more deeply connect with staff and campers by opening up time to engage outside of the kitchen.</p>
+
+  <div style="display:flex; gap:1rem; margin-top:1rem; max-width:600px; margin-left:auto; margin-right:auto; justify-content:center; align-items:center;">
+    <figure style="margin:0; text-align:center; width:60%;">
+      <img src="hobieandme.jpeg" alt="Hobie and I" style="object-position:left top; width:100%; border-radius:8px; object-fit:cover;" />
+      <figcaption style="margin-top:0.4rem; font-size:0.85rem; color:#19823D;">I was sad to leave Hobie after spending 3 meals a day with him for 2 weeks straight!</figcaption>
+    </figure>
+  </div>
+</section>
             <section id="why-include-this" class="content-section">
                 <h2>Why Include This?</h2>
-                <p>Reflect on why this belongs in your portfolio. What does it reveal about how you think, what you care about, or who you are as a designer?</p>
-            </section>
-
+                <p>I signed up to wash dishes for two weeks; I never thought I would include this in any sort of resume. Yet, this experience is without a doubt evidence that I can't escape a process improvement mindset.
+                Whatever is put in front of me I will try to optimize -- even something as simple as a dishwashing line. I tried putting the cups here, putting the plates there, loading the tubs this way and that, and I was enthralled by it all.
+                I talked myself through new ideas out loud to reason out their potential benefits and issues. My iterations some days were minute, but they were always present. I love finding ways to make the places I'm in better, even when I'm doing dishes! <br><br>
+                 <div class="grid-1x4">
+  <img src="jeepandme%20(1).jpeg" alt="Jeep and I" />
+  <img src="canoe.jpeg" alt="Image 2" style="object-position: left center;" />
+  <img src="larp.JPG" alt="Image 3" />
+  <img src="cabin.jpeg" alt="Image 4" />
+</div> </section>
         </main>
     </div>
 
